@@ -48,9 +48,15 @@ body {
 }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
+  line-height: 1.5;*/
+  
+  font-family: 'freight-text-pro', Georgia, serif;
+  font-size: 22px;
   line-height: 1.5;
+  
+  /*font: 16px/28px 'Helvetica Neue', Helvetica, sans-serif;*/
 }
 @media (min-width: 38em) {
   html {
@@ -67,7 +73,9 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #268bd2;
+  /*color: #268bd2;
+  text-decoration: none;*/
+  color: #DD574C;
   text-decoration: none;
 }
 a strong {
@@ -76,12 +84,20 @@ a strong {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
+  color: #555;
+  text-decoration: none;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5rem;
+  /*margin-bottom: .5rem;
+  font-weight: bold;
+  line-height: 1.25;
+  color: #313131;
+  text-rendering: optimizeLegibility;*/
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+  margin-bottom: 4%;
   font-weight: bold;
   line-height: 1.25;
   color: #313131;
@@ -153,9 +169,14 @@ pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
 code {
-  padding: .25em .5em;
+  /*padding: .25em .5em;
   font-size: 85%;
   color: #bf616a;
+  background-color: #f9f9f9;
+  border-radius: 3px;*/
+  padding: .25em .5em;
+  font-size: 85%;
+  color: #515151;
   background-color: #f9f9f9;
   border-radius: 3px;
 }
@@ -331,14 +352,32 @@ tbody tr:nth-child(odd) th {
 .page,
 .post {
   margin-bottom: 4em;
+  
+  /*font-family: 'freight-text-pro', Georgia, serif;
+  font-size: 22px;
+  line-height: 1.5;*/
 }
 
 /* Blog post or page title */
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  /*color: #303030;*/
+  color: #222;  
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 52px;
+  line-height: 62px;
+  text-align: center;
 }
+
+/* Added... */
+.page-title,
+.post-title,
+.post-title a:hover {
+	color: #666;
+}
+
 .page-title,
 .post-title {
   margin-top: 0;
@@ -346,10 +385,19 @@ tbody tr:nth-child(odd) th {
 
 /* Meta data line below post title */
 .post-date {
-  display: block;
+  /*display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
-  color: #9a9a9a;
+  color: #9a9a9a;*/
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  color: #d2d2d2;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3%;
+  width: 100%;
+  display: inline-block;
 }
 
 /* Related posts */
@@ -370,8 +418,8 @@ tbody tr:nth-child(odd) th {
   color: #999;
 }
 .related-posts li a:hover {
-  color: #268bd2;
-  text-decoration: none;
+  /*color: #268bd2;
+  text-decoration: none;*/
 }
 .related-posts li a:hover small {
   color: inherit;
@@ -427,4 +475,11 @@ a.pagination-item:hover {
     border-top-right-radius:    4px;
     border-bottom-right-radius: 4px;
   }
+}
+
+
+/* Footer */
+.footer {
+  color: #ccc;
+  font: 16px/28px 'Helvetica Neue', Helvetica, sans-serif;
 }
