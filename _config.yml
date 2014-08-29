@@ -7,16 +7,16 @@ permalink:        pretty
 
 # Setup
 title:            Website of Fabian Kostadinov
-tagline:          
+tagline:          None
 url:              http://fabian-kostadinov.github.io
 paginate:         1
 baseurl:          /
 author:
   name:           Fabian Kostadinov
   url:            http://fabian-kostadinov.github.io
-  email:          
+  email:          none@none.com
 
 # Custom vars
 version:          1.0.0
-github:           https://github.com/fabian-kostadinov
-  repo:           https://github.com/fabian-kostadinov/fabian-kostadinov.github.io
+github:           
+  repo:           https://github.com/fabian-kostadinov
