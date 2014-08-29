@@ -6,7 +6,7 @@ highlighter:      true
 permalink:        pretty
 
 # Setup
-title:            Website of Fabian Kostadinov
+title:            Fabian Kostadinov
 tagline:          None
 url:              http://fabian-kostadinov.github.io
 paginate:         1
