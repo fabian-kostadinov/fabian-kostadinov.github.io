@@ -392,7 +392,6 @@ tbody tr:nth-child(odd) th {
   color: #E34033;
 }
 
-
 /*
  * Posts and pages
  *
@@ -402,11 +401,7 @@ tbody tr:nth-child(odd) th {
 
 .page,
 .post {
-  margin-bottom: 4em;
-  
-  /*font-family: 'freight-text-pro', Georgia, serif;
-  font-size: 22px;
-  line-height: 1.5;*/
+  /*margin-bottom: 4em;*/
 }
 
 /* Blog post or page title */
@@ -449,6 +444,26 @@ tbody tr:nth-child(odd) th {
   margin-bottom: 3%;
   width: 100%;
   display: inline-block;
+}
+
+.post-readmore {
+  text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.post-readmore a {
+  color: #3F00C0;
+}
+
+.post-readmore a:hover {
+  color: #E34033;
+}
+
+.post-separator {
+  margin-bottom: 7rem;
 }
 
 /* Related posts */

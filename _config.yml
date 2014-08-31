@@ -9,7 +9,7 @@ permalink:        pretty
 title:            Fabian Kostadinov
 #tagline:          None
 url:              http://fabian-kostadinov.github.io
-paginate:         1
+paginate:         5
 baseurl:          /
 author:
   name:           Fabian Kostadinov

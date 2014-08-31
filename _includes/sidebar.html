@@ -1,0 +1,14 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+
+	  <h4 class="sidebar-header">Recent Posts<h4>
+	  <ul>
+	  {% for post in site.posts limit: 2 %}
+		<li>{{ post.title }}</li>
+	  {% endfor %}
+	  </ul>
+  
+  </div>
+</div>
+
+
