@@ -16,7 +16,17 @@ author:
   url:            http://fabian-kostadinov.github.io
   email:          none@none.com
 
+pages_list:
+  ABOUT:          '/about'
+  ARCHIVE:        '/archive'
+  FEED:           '/atom.xml'
+  
 # Custom vars
 version:          1.0.0
 github:           
   repo:           https://github.com/fabian-kostadinov
+  
+comments:
+  provider:       disqus
+  disqus:
+    short_name:   fabian-kostadinov

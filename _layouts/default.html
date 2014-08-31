@@ -7,22 +7,29 @@
 
     <div class="container content">
       <div class="masthead">
-		<img class="masthead-logo" src="public/img/logo_64x64.png" alt="logo">		
+		<img class="masthead-logo" src="/public/img/logo_64x64.png" alt="logo">	
+		
 		<h3 class="masthead-title">
 		  <a href="{{ site.baseurl }}" title="Home">{{ site.title }}</a>
-          <small>{{ site.tagline }}</small>
+          <!-- <small>{{ site.tagline }}</small> -->
         </h3>
-      </div>
+		
+	  </div>
 
+	  <nav role="navigation" class="header-nav">
+		<span class="navigation-container">
+		    {% for page in site.pages_list %}
+		    <span class="navigation-item"><a href="{{ page[1]  }}">{{ page[0] }}</a></span>
+		    {% endfor %}
+		</span>
+	  </nav>
+	  
       {{ content }}
 
       <div class="footer">
-        <p>
-		  <span class="footer-inside-left"><a href="/atom.xml" >RSS</a></span>
-		  <span class="footer-inside-right">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</span>
-        </p>
+		<p class="footer-inside-left">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
       </div>
     </div>
-
+	
   </body>
 </html>
