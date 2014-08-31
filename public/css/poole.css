@@ -338,7 +338,8 @@ tbody tr:nth-child(odd) th {
   font-weight: 700;
   font-size: 30px;*/
   
-  color: #505050;
+  /*color: #505050;*/
+  /*color: #222;*/
   font-weight: 700;
   font-size: 30px;
   display: inline;
@@ -348,7 +349,8 @@ tbody tr:nth-child(odd) th {
 }
 
 .masthead-title a {
-  color: #505050;
+  /*color: #505050;*/
+  color: #222;
 }
 .masthead-title small {
   font-size: 75%;
@@ -512,12 +514,12 @@ tbody tr:nth-child(odd) th {
 
 /* Added rule */
 .pagination-item.older {
-  float: left;
+  float: right;
 }
 
 /* Added rule */
 .pagination-item.newer {
-  float: right;
+  float: left;
 }
 
 a.pagination-item {
