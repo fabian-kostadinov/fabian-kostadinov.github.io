@@ -30,3 +30,5 @@ comments:
   provider:       disqus
   disqus:
     short_name:   fabian-kostadinov
+
+timezone:         Europe/Zurich
