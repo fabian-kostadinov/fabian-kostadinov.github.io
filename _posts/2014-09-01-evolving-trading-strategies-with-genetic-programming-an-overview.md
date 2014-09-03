@@ -78,5 +78,10 @@ It is a well-known mathematical fact that sufficiently complicated functions can
 
 ----
 
+## Read the next article
+Part 2: [Evolving Trading Strategies With Genetic Programming - Encoding Trading Stragegies]({% post_url 2014-09-03-evolving-trading-strategies-with-genetic-programming-encoding-trading-strategies %})
+
+----
+
 ## References
 [1] Chen S.-H., Navet N. (2007): [Failure of Genetic-Programming Induced Trading Strategies: Distinguishing between Efficient Markets and Inefficient Algorithms](http://hal.archives-ouvertes.fr/docs/00/16/82/69/PDF/SHC_NN_Springer2007.pdf). In: Computational Intelligence in Economics and Finance, Volume 2. Springer Verlag, Berlin Heidelberg. pp 169-182.
