@@ -3,7 +3,7 @@ layout: post
 title: Evolving Trading Strategies With Genetic Programming - An Overview
 comments: true
 ---
-
+# Part 1
 Writing a software program that creates - or to be more exact, evolves - trading strategies with genetic programming (GP) requires a set of design decisions to be taken concerning different aspects. In this article I will presume that the goal is to evolve a trading strategy consisting of technical indicators only, which will return entry and exit signals. Some elements like stop and limit order can be co-evolved with the basic entry and exit signals. Although it is also possible to use GP for stock selection purposes based on fundamental data, we will not look deeper into this possibility.
 
 A complete trading strategy combines several of the following elements:

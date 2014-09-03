@@ -28,6 +28,7 @@
  * Reverse layout
  * Themes
  * Footer
+ * Tracker
  */
 
 
@@ -606,4 +607,9 @@ span.pagination-item {
 
 .footer .footer-inside-right {
   text-align: right;
+}
+
+/* Tracker */
+.tracker {
+  display: none;
 }
