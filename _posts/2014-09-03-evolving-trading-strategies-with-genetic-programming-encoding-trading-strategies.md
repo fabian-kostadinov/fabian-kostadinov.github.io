@@ -53,6 +53,11 @@ Some traders apparently believe that GP or other data mining strategies have the
 
 ----
 
+## Read the previous article
+Part 1: [Evolving Trading Strategies With Genetic Programming - An Overview]({% post_url 2014-09-01-evolving-trading-strategies-with-genetic-programming-an-overview %})
+
+----
+
 # References
 [1] Poli R., Langdon W. B., McPhee N. F., Koza J. R. (2008): [A Field Guide to Genetic Programming](http://cswww.essex.ac.uk/staff/poli/gp-field-guide/). Available online at [http://cswww.essex.ac.uk/staff/poli/gp-field-guide](http://cswww.essex.ac.uk/staff/poli/gp-field-guide/)
 
