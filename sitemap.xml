@@ -1,0 +1,26 @@
+---
+---
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}{{ site.pages_list.ARCHIVE }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}{{ site.pages_list.ABOUT }}/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+{% for post in site.posts %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+{% endfor %}
+</urlset>

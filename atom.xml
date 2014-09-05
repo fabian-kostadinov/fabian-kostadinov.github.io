@@ -1,5 +1,6 @@
 ---
 layout: nil
+sitemap_exclude: true
 ---
 
 <?xml version="1.0" encoding="utf-8"?>
