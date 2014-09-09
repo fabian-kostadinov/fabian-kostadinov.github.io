@@ -16,6 +16,7 @@ author:
   url:            http://fabian-kostadinov.github.io
   email:          none@none.com
 
+
 # Don't forget to add these to sitemap.xml
 pages_list:
   ABOUT:          '/about'

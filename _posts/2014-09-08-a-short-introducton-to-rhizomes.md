@@ -2,12 +2,13 @@
 layout: post
 title: A Short Introduction to Rhizomes
 comments: true
+excerpt_separator: <!--more-->
 ---
 
-Be <code>r<sub>k</sub> <= (r<sub>i</sub>, r<sub>j</sub>)</code> a _directed relation_ _r<sub>k</sub>_ between the ordered pair of relata _r<sub>i</sub>_ and _r<sub>j</sub>_, with <code>r<sub>k</sub> &#8800; r<sub>i</sub></code> and <code>r<sub>k</sub> &#8800; r<sub>j</sub></code>. We will call a relation a _terminal_ iff <code>r<sub>i</sub> = r<sub>j</sub></code>.
+Be <code>r<sub>k</sub> <= (r<sub>i</sub>, r<sub>j</sub>)</code> a _directed relation_ _r<sub>k</sub>_ between the ordered pair of relata _r<sub>i</sub>_ and _r<sub>j</sub>_, with <code>r<sub>k</sub> &#8800; r<sub>i</sub></code> and <code>r<sub>k</sub> &#8800; r<sub>j</sub></code>. We will call a relation a _terminal_ iff <code>r<sub>i</sub> = r<sub>j</sub></code>. Furthermore, we call _r<sub>i</sub>_ (the left-hand-sided element in the ordered pair) the _nominative relatum_ and _r<sub>j</sub>_ (the right-hand-sided element in the ordered pair) the _associative relatum_.
 
 *__Definition__*:
-<div class="message">A _rhizome_ is recursively defined as a relation between two relata where both relata are relations themselves.</div>
+<div class="message">A _rhizome_ is recursively defined as a directed relation between two relata where both relata are directed relations themselves.</div>
 To be really of use a rhizome must be complemented by a (bidirectional) dictionary (or similar data structure) that maps between terminals and data items. The rhizome itself does not store any data in a traditional sense, but only relations.  
 Here is a picture of a sample rhizome:
 
@@ -48,7 +49,8 @@ This rhizome consists of four terminal and several non-terminal relations:
   </tr>
 </table>
 
-r1 to r4 are relata but not relators. Furthermore, r9, r11, r14 and r16 are only relators but not relata.  
+r1 to r4 are relata but not relators. Furthermore, r9, r11, r14 and r16 are only relators but not relata.
+  
 On the right-hand-side of the rhizome, we added a sample dictionary. The four characters <code>A</code>, <code>B</code>, <code>C</code> and <code>D</code> are stored in the dictionary and they were assigned a terminal relation each. The rhizome tree can be traversed from top to bottom replacing each relator through its pair of relata until all relations are resolved to terminals. Finally, the terminals are replaced with values stored in the dictionary. This is a list of relators and the character strings they represent:
 
 * r5 <= (r1, r1) = A

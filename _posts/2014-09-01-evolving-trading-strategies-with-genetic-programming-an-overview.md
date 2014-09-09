@@ -78,8 +78,11 @@ It is a well-known mathematical fact that sufficiently complicated functions can
 
 ----
 
-## Read the next article
-Part 2: [Evolving Trading Strategies With Genetic Programming - Encoding Trading Stragegies]({% post_url 2014-09-03-evolving-trading-strategies-with-genetic-programming-encoding-trading-strategies %})
+## Other articles
+
+### Next
+
+* Part 2: [Evolving Trading Strategies With Genetic Programming - Encoding Trading Stragegies]({% post_url 2014-09-03-evolving-trading-strategies-with-genetic-programming-encoding-trading-strategies %})
 
 ----
 
