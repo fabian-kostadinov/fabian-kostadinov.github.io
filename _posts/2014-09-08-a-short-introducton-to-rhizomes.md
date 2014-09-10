@@ -5,7 +5,7 @@ comments: true
 excerpt_separator: <!--more-->
 ---
 
-Be <code>r<sub>k</sub> <= (r<sub>i</sub>, r<sub>j</sub>)</code> a _directed relation_ _r<sub>k</sub>_ between the ordered pair of relata _r<sub>i</sub>_ and _r<sub>j</sub>_, with <code>r<sub>k</sub> &#8800; r<sub>i</sub></code> and <code>r<sub>k</sub> &#8800; r<sub>j</sub></code>. We will call a relation a _terminal_ iff <code>r<sub>i</sub> = r<sub>j</sub></code>. Furthermore, we call _r<sub>i</sub>_ (the left-hand-sided element in the ordered pair) the _nominative relatum_ and _r<sub>j</sub>_ (the right-hand-sided element in the ordered pair) the _associative relatum_.
+Be <code>r<sub>k</sub> <= (r<sub>i</sub>, r<sub>j</sub>)</code> a _directed relation_ _r<sub>k</sub>_ between the ordered pair of relata _r<sub>i</sub>_ and _r<sub>j</sub>_, with <code>r<sub>k</sub> &#8800; r<sub>i</sub></code> and <code>r<sub>k</sub> &#8800; r<sub>j</sub></code>. We will call a relation a _terminal_ iff <code>r<sub>i</sub> = r<sub>j</sub></code>. Furthermore, we call _r<sub>i</sub>_ (the left-hand-sided element in the ordered pair) the _normative relatum_ and _r<sub>j</sub>_ (the right-hand-sided element in the ordered pair) the _associative relatum_.
 
 *__Definition__*:
 <div class="message">A _rhizome_ is recursively defined as a directed relation between two relata where both relata are directed relations themselves.</div>
