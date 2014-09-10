@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Applications of rhizomes
+title: Applications of Rhizomes
 comments: true
 ---
 
