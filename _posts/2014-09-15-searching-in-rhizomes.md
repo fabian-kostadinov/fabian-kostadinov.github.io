@@ -28,7 +28,7 @@ Fortunately, it is possible to memoize in-between results. Some relations are sh
 What if we do not only want to know _if_ a relation actually exists but also _where_ it is stored? As I mentioned further above as long as no clearly defined contextual order is given this is impossible to answer. A rhizome has no inherent order or indexing scheme. The term "where" is not defined. What is possible to answer though is questions of the type: _Does the relation represented by z-pairing value <code>z</code> contain the relation <code>(A, B)</code>?_ We simply need to expand the relator <code>r<sub>z</sub></code> to its relata and continue down the rhizome tree recursively. If anywhere in the chain the relation <code>(A, B)</code> is found the answer is yes.
 
 ----
-# See also:
+## See also:
 
 * [Implementation of Rhizomes]({% post_url 2014-09-09-implementation-of-rhizomes %})
 * [A Short Introduction to Rhizomes]({% post_url 2014-09-08-a-short-introducton-to-rhizomes %})
