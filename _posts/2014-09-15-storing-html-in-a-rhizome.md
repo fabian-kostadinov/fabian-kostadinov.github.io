@@ -13,7 +13,8 @@ Consider the following HTML.
 <body></body>
 </html>
 {% endhighlight %}
-How could we store this in a rhizome? First of all, it would make sense to treat every HTML tag as an atomic symbol. There are three such symbols in the sample: _html_, _head_ and _body_. Let us assume that, unless qualified otherwise, the direction of a relation indicates a parent-child relationship. Thus, _(x, y)_ must be read as "x _is parent of_ y". The _html_ tag has two children and they are ordered. _html_ is both parent of _head_ and of _body_, but _head_ is the first child and _body_ is the second. How could we express this fact? At this time, it is useful to introduce _qualifiers_.
+How could we store this in a rhizome? First of all, it would make sense to treat every HTML tag as an atomic symbol. There are three such symbols in the sample: _html_, _head_ and _body_.<!--more--> Let us assume that, unless qualified otherwise, the direction of a relation indicates a parent-child relationship. Thus, _(x, y)_ must be read as "x _is parent of_ y". The _html_ tag has two children and they are ordered. _html_ is both parent of _head_ and of _body_, but _head_ is the first child and _body_ is the second. How could we express this fact? At this time, it is useful to introduce _qualifiers_.
+
 
 __Definition:__
 <div class="message">A _qualifier_ _q_ is a relation which, when paired with another relation _r<sub>i</sub>_, indicates how that relation _r<sub>i</sub>_ should be processed.</div>

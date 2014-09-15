@@ -3,7 +3,7 @@ layout: post
 title: Implementation of Rhizomes
 comments: true
 ---
-There are at least three different ways how to implement a rhizome on existing hard- and software platforms: as an object tree, relying on a programming language pointer arithmetic, or using mathematical pairing functions.
+There are at least three different ways how to implement a rhizome on existing hard- and software platforms: as an object tree, relying on a programming language pointer arithmetic, or using mathematical pairing functions.<!--more-->
 
 ## Implementation as object tree
 
