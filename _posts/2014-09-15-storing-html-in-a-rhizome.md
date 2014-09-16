@@ -204,16 +204,24 @@ Imagine that two clients store the same atomic symbol table and use the same enc
     <td>(4, 4)</td>
   </tr>
   <tr>
-    <td>[value]</td>
+    <td>title</td>
     <td>(5, 5)</td>
   </tr>
   <tr>
-    <td>s<sub>1<sub></td>
+    <td>h1</td>
     <td>(6, 6)</td>
   </tr>
   <tr>
-    <td>s<sub>2</sub></td>
+    <td>[value]</td>
     <td>(7, 7)</td>
+  </tr>
+  <tr>
+    <td>s<sub>1<sub></td>
+    <td>(8, 8)</td>
+  </tr>
+  <tr>
+    <td>s<sub>2</sub></td>
+    <td>(9, 9)</td>
   </tr>
 </table>
 with <code>s<sub>1</sub> = "Hello World!", s<sub>2</sub> = "My First Heading"</code>.
