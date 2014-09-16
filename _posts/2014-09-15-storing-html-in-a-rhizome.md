@@ -98,7 +98,11 @@ Or expressed tree-like:
   </tr>
 </table>
 
-Note that we did not add a comma <code>,</code> between the head and the body relation. Adding a [sibling] qualifier, we pair the two relations and end up with:
+Expressed graphically:
+
+!["HTML Stored as Rhizome Disjunct"](/public/img/html-stored-as-rhizome-1.jpg "HTML Stored as Rhizome Disjunct")
+
+Note that we did not add a comma <code>,</code> between the head and the body relation. The two sibling tags _head_ and _body_ are not directly related to each other. Adding a [sibling] qualifier, we pair the two relations and end up with:
 
 1. <code>((((html, [child]), head), [sibling]), ((html, [child]), body)) = (((((2, 2), (0, 0)), (3, 3)), (1, 1)), (((2, 2), (0, 0)), (4, 4)))</code>
 
@@ -155,6 +159,13 @@ Or expressed as a tree:
   </tr>
 </table>
 
+This is a graphical representation of the same tree.
+
+!["HTML Stored as Rhizome Conjunct"](/public/img/html-stored-as-rhizome-2.jpg "HTML Stored as Rhizome Conjunct")
+
+Using only the simple rules above, we can now go on adding tags. Each tag is either a child or a sibling in relation to another one.
+
+Imagine that two clients store the same atomic symbol table and use the same encoding algorithm. It is now possible to send a single (possibly very long) integer number over a network, and the receiver can fully re-compute the complete HTML tree. Of course, a possibility for actually storing content is still missing. For this purpose, we could introduce a further qualifier [value]. Once the atomic symbol table is complete concerning valid HTML tags, we start adding one numbered variable per plain, textual content. A relation <code>(s<sub>i</sub>, [value])</code> would indicate a textual content stored in variable _s<sub>i</sub>_. Of course it would be necessary to also submit the plain textual content of every variable over the network. The result would look something like this:
 
 {% highlight html %}
 <html>
@@ -167,6 +178,44 @@ Or expressed as a tree:
 </html>
 {% endhighlight %}
 
-Using only the simple rules above, we can now go on adding tags. Each tag is either a child or a sibling in relation to another one.
+<table>
+  <tr>
+    <th>HTML Tag</th>
+    <th>Terminal Relation</th>
+  </tr>
+  <tr>
+    <td>[child]</td>
+    <td>(0, 0)</td>
+  </tr>
+  <tr>
+    <td>[sibling]</td>
+    <td>(1, 1)</td>
+  </tr>
+  <tr>
+    <td>html</td>
+    <td>(2, 2)</td>
+  </tr>
+  <tr>
+    <td>head</td>
+    <td>(3, 3)</td>
+  </tr>
+  <tr>
+    <td>body</td>
+    <td>(4, 4)</td>
+  </tr>
+  <tr>
+    <td>[value]</td>
+    <td>(5, 5)</td>
+  </tr>
+  <tr>
+    <td>s<sub>1<sub></td>
+    <td>(6, 6)</td>
+  </tr>
+  <tr>
+    <td>s<sub>2</sub></td>
+    <td>(7, 7)</td>
+  </tr>
+</table>
+with <code>s<sub>1</sub> = "Hello World!", s<sub>2</sub> = "My First Heading"</code>.
 
-Imagine that two clients store the same atomic symbol table and use the same encoding algorithm. It is now possible to send a single (possibly very long) integer number over a network, and the receiver can fully re-compute the complete HTML tree. Of course, a possibility for actually storing content is still missing. For this purpose, we could introduce a further qualifier [value]. Once the atomic symbol table is complete concerning valid HTML tags, we start adding one numbered variable per plain, textual content. A relation <code>(s<sub>i</sub>, [value])</code> would indicate a textual content stored in variable _s<sub>i</sub>_. Of course it would be necessary to also submit the plain textual content of every variable over the network. The same procedure would be applicable to tag attributes. First, introduce a new qualifier [attribute]. Then, add all valid HTML attributes (such as id, name, href etc.) to the atomic symbol table. (Be aware that this does not prohibit us to create meaningless combinations of tags and attributes such as <code>&lt;table href=""&gt;</code>.) The textual content variables are then stored after the tag attributes in the atomic symbol table.
+The same procedure would be applicable to tag attributes. First, introduce a new qualifier [attribute]. Then, add all valid HTML attributes (such as id, name, href etc.) to the atomic symbol table. (Be aware that this does not prohibit us to create meaningless combinations of tags and attributes such as <code>&lt;table href=""&gt;</code>.) The textual content variables are then stored after the tag attributes in the atomic symbol table.
