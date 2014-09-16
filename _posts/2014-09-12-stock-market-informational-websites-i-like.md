@@ -2,6 +2,7 @@
 layout: post
 title: Stock Market Informational Websites I Like
 comments: true
+tags: [investing]
 ---
 
 This is a non-exhaustive list of websites on stock market investing (and trading) I like for various reasons.<!--more-->

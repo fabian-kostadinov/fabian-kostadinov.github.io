@@ -2,6 +2,7 @@
 layout: post
 title: Searching in Rhizomes
 comments: true
+tags: [rhizome]
 ---
 In this post I will look into how it is possible to search in rhizomes. I will assume that the rhizome implementation relies on pairing functions to store relations. I described the basic necessary data structures [in a previous post]({% post_url 2014-09-09-implementation-of-rhizomes %}). The term "searching in a rhizome" is not defined precisely. Searching implies that some contextual order is given and that the search is conducted in relation to this order. For rhizomes (similar to graphs) it is not entirely clear what constitutes this contextual order, the the definition of contextual order might depend upon one's situation.<!--more-->
 

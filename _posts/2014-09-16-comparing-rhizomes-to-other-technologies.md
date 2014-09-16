@@ -2,6 +2,7 @@
 layout: post
 title: Comparing Rhizomes to Other Technologies
 comments: true
+tags: [rhizome]
 ---
 At a first glance, rhizomes may have a lot in common with existing technologies. Yet, when taking a closer look, there are important differences, and it is not possible to simply reduce a rhizome to one or another existing technology. In this post I will quickly compare rhizomes to a variety of different mathematical and computational concepts and data structures.<!--more-->
 

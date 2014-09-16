@@ -2,6 +2,7 @@
 layout: post
 title: Pile or Rhizome? A Short Pamphlet.
 comments: true
+tags: [rhizome]
 ---
 [Erez Elul](http://namzezam.wikidot.com/), whose honor it is to have "discovered" or "invented" the data structures I deliberately continue to call _rhizomes_, originally named his invention _pile_ (or _pile system_). The relatively few authors (for instance [Peter Krieg](http://en.wikipedia.org/wiki/Peter_Krieg), [Ralf Westphal](http://blog.ralfw.de/), [Ralf Barkow](http://ralfbarkow.wordpress.com/), Miriam Bedoni as well as others besides them), who both commented and contributed on the invention accepted this naming. I must say I never found the term particularly saying for several reasons.<!--more-->
 

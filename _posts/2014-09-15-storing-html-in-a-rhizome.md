@@ -2,6 +2,7 @@
 layout: post
 title: Storing HTML in a Rhizome
 comments: true
+tags: [rhizome]
 ---
 
 This post demonstrates how it is possible to use rhizomes to store simple HTML.
