@@ -484,9 +484,13 @@ tbody tr:nth-child(odd) th {
   font-size: 75%;
   color: #999;
 }
+.related-posts li a {
+  color: #3F00C0;
+}
 .related-posts li a:hover {
   /*color: #268bd2;
   text-decoration: none;*/
+  color: #E34033;
 }
 .related-posts li a:hover small {
   color: inherit;
