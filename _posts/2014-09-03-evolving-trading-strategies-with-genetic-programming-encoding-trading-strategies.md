@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Evolving Trading Strategies With Genetic Programming - Encoding Trading Strategies
-comments: true
-category: money
-tags: [genetic programming, trading]
+comments: truetags: [genetic programming, trading]
 ---
 # Part 2
 As I have shown in a [previous post]({% post_url 2014-09-01-evolving-trading-strategies-with-genetic-programming-an-overview %}) in GP entry and exit decision rules are encoded in a tree form. The decision rule tree returns a boolean value for every processed bar, which is interpreted as an entry (root node returning <code>true</code>) or exit (root node returning <code>false</code>) signal. Some authors suggest using a single rule tree for entry and exit signals, but I personally prefer evolving dedicated rule trees for both entry and exit rules, as I believe them to produce better signals.<!--more--> During strategy evaluation the program alternately "reactivates" one or the other tree and ignores the signals produced by the inactive tree. This works for long-only or short-only trading. For long/short-strategies this approach leads to four different decision rule trees being evolved. This obviously also increases the degrees of freedom of our trading strategies and therefore the danger of overfitting.

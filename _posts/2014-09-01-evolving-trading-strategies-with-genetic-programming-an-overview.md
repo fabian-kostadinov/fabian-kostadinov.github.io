@@ -2,7 +2,6 @@
 layout: post
 title: Evolving Trading Strategies With Genetic Programming - An Overview
 comments: true
-category: money
 tags: [genetic programming, trading]
 ---
 # Part 1
