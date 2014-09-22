@@ -2,11 +2,14 @@
 layout: post
 title: Evolving Trading Strategies With Genetic Programming - Data
 comments: true
+tags: [genetic programming, trading]
 ---
 
 # Part 3
 
-Genetic programming (GP) heavily relies on existing time series data. These data are obtained from different commercial or open source data providers. Here is a list of free data providers.
+Genetic programming (GP) heavily relies on existing time series data. In this post I am going to look into different requirements and problems related to data.
+
+First, we need to get the data from somewhere. There are different commercial or free data providers. Here is a list of free data providers.<!--more-->
 
 * [Yahoo Finance](http://finance.yahoo.com): Provides historical daily open/high/low/close/volume (OHLCV) quotes for many stocks as comma separated value (CSV) or Excel files. Data quality does not always reach a desirable level.
 * [Finanzen.ch](http://www.finanzen.ch/): Provides stock data for download similar to Yahoo Finance.
