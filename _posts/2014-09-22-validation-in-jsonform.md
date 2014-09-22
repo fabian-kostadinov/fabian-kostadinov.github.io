@@ -26,9 +26,9 @@ In my case though all Javascript files were pre-compiled into a single, big, com
     <script type="text/javascript" src="my-precompiled-js-lib.js"></script>
 </body>
 {% endhighlight %}
-Maybe not the most elegant solution, but it worked.
+Maybe not the most elegant solution, but it worked. It is important to understand that if you do not provide a JSV library, then clicking JSONForm's <code>submit</code> button will actually trigger the HTML5 compliant browser-internal form validation. This is not really what you want to happen, as there are some important differences between JSONForm's own validation procedure and the one provided internally by most modern browsers. For instance, JSONForm renders input elements with <code>type="number"</code> actually as text inputs but validates them as number inputs, whereas the HTML5 compliant browser-internal validation validates them as text input.
 
-I still had to trigger the validation manually though. This involved several steps. The problem is that there exists code for validation inside the JSONForm Javascript library, but unfortunately it is tightly bound to the <code>submit</code> button click. I did not want to change any code inside the JSONForm library and try to expose the validation function to the outside world. There are however two other exposed functions that I could rely upon: <code>myFormEl.jsonFormValue()</code> and <code>myFormEl.jsonFormErrors(errors, options)</code>. The first method returns all entered form values, the second one highlights invalid form input elements.
+So, I still had to trigger the validation manually. This involved several steps. The problem is that there exists code for validation inside the JSONForm Javascript library, but unfortunately it is tightly bound to the <code>submit</code> button click. I did not want to change any code inside the JSONForm library and try to expose the validation function to the outside world. There are however two other exposed functions that I could rely upon: <code>myFormEl.jsonFormValue()</code> and <code>myFormEl.jsonFormErrors(errors, options)</code>. The first method returns all entered form values, the second one highlights invalid form input elements.
 
 Thus, in my site's <code>save</code> function, added the following code:
 {% highlight js %}
