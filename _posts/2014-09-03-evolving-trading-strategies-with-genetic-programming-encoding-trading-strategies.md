@@ -62,7 +62,7 @@ Some traders apparently believe that GP or other data mining strategies have the
 
 ### Next
 
-* Part 3: Evolving Trading Strategies With Genetic Programming - Data
+* Part 3: [Evolving Trading Strategies With Genetic Programming - Data]({% post_url 2014-09-22-evolving-trading-strategies-with-genetic-programming-data %})
 
 ----
 
