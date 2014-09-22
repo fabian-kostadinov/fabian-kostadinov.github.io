@@ -4,7 +4,6 @@ title: Evolving Trading Strategies With Genetic Programming - Data
 comments: true
 tags: [genetic programming, trading]
 ---
-
 # Part 3
 
 Genetic programming (GP) heavily relies on existing time series data. In this post I am going to look into different requirements and problems related to data.
