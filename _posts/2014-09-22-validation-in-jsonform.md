@@ -56,7 +56,7 @@ This code actually triggers the validation. We retrieve the user input with <cod
 
 5. <code>var options = {};  
 formEl.jsonFormErrors(report.errors, options);</code>  
-<code>option</code> is simply an empty object. In the current JSONForm version, it does not serve any purpose, but it is still needed as a function parameter. Calling <code>formEl.jsonFormErrors(...)</code> will highlight invalid input elements on the page and also show a short error message to the user.
+<code>options</code> is simply an empty object. In the current JSONForm version, it does not serve any purpose, but it is still needed as a function parameter. Calling <code>formEl.jsonFormErrors(...)</code> will highlight invalid input elements on the page and also show a short error message to the user.
 
 Some remarks. First, JSONForm's logic how to render certain specified input types to input elements is not always intuitive. For example, the schema specification <code>"foo": { "type": "number" }</code> results in an input element of type text: <code>&lt;input type="text"&gt;</code>. [JSONForm on the default mapping](https://github.com/joshfire/jsonform/wiki#default-mapping):
 <blockquote><ul>
