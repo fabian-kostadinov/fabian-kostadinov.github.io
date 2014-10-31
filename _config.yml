@@ -18,6 +18,7 @@ author:
   
 excerpt_separator: <!--more-->
 
+exclude:          [_ignore]
 
 # Don't forget to add these to sitemap.xml
 pages_list:

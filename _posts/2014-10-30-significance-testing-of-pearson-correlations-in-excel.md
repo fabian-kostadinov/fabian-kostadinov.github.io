@@ -64,7 +64,7 @@ We now have all information needed to perform the significance test. i) We have 
 ## Using Excel for t-tests
 
 ### TINV, T.INV.2T, TDIST, and T.DIST.2T
-Of course, calculating critical t-values can be done in Excel too. Before Excel 2010, there were only the TINV and TDIST formulas, now there are additionally the T.INV.2T and the T.DIST.2T formulas.
+Of course, calculating critical t-values can be done in Excel too. Before Excel 2010, there were only the TINV and TDIST formulas, now there are additionally the T.INV.2T and the T.DIST.2T formulas. All these formulas express confidence _negatively_, that is the probability value _p_ represents the probability for being wrong.
 
 <table>
   <tr>
@@ -87,13 +87,13 @@ Of course, calculating critical t-values can be done in Excel too. Before Excel 
 
 TINV is the inverse of the TDIST formula and vice versa.
 
-_Examples:_ Let _p = 0.05_, _n = 100_ (therefore _df = 100 - 2 = 98_). We assume a two-tailed t-test.
+_Examples:_ Let _p = 0.05_ (5% probability of being wrong), _n = 100_ (therefore _df = 100 - 2 = 98_). We assume a two-tailed t-test.
 
 * Calculating _t_ for a given _p_: <code>=TINV(0.05; 100-2)</code> = <code>=T.INV.2T(0.05; 100-2)</code> = 1.9844675.
 * Calculating _p_ for a given _t_: <code>=TDIST(1.9844675;100-2;2)</code> = <code>=T.DIST.2T(1.9844675;100-2)</code> = <code>=2*TDIST(1.9844675;100-2;1)</code> = 0.05.
 
 ### T.INV and T.DIST
-Since Excel 2010, there is also a T.INV and a T.DIST formula. _Confusingly, they actually work quite differently from TINV and TDIST!_
+Since Excel 2010, there is also a T.INV and a T.DIST formula. _Confusingly, they actually work quite differently from TINV and TDIST!_ First, unlike TINV and TDIST, T.INV and T.DIST by default are _one-tailed_. Second, unlike TINV and TDIST, T.INV and T.DIST actually express confidence _positively_, that is the probability value _p_ represents the degree of certainty.
 
 <table>
   <tr>
@@ -105,3 +105,8 @@ Since Excel 2010, there is also a T.INV and a T.DIST formula. _Confusingly, they
     <td>returns a probability value <i>p</i> for the given t-value <i>t</i>, the degrees of freedom <i>df</i>, assuming a one-tailed t-test. <code>=2*(1-T.DIST(p;df;true))</code> is equivalent to <code>=TDIST(p;df;2)</code>. Furthermore, <code>=1-T.DIST(p;df;true)</code> is equivalent to <code>=TDIST(p;df;1)</code>.</td>
   </tr>
 </table>
+
+_Examples:_ Let _p = 0.05_ (5% probability of being wrong), _n = 100_ (therefore _df = 100 - 2 = 98_). We assume a two-tailed t-test.
+
+* Calculating _t_ for a given _p_: <code>=T.INV(1-0.05/2;98)</code> = <code>=TINV(0.05;98)</code> = 1.9844675.
+* Calculating _p_ for a given _t_: <code>=2*(1-T.DIST(1.9844675;98;true))</code> = <code>=TDIST(1.9844675;98)</code> = 0.05;
