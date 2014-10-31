@@ -11,7 +11,7 @@ First, I had to calculate the corresponding Pearson correlation coefficients acc
 
 ![Pearson correlation coefficient formula](/public/img/20141030-pearson-correlation-coefficient-formula.png "Pearson correlation coefficient formula")
 
-where _r<sub>xy</sub>_ is the Pearson correlation coefficient, _n_ the number of observations in one data series, _x&#772;_ the arithmetic mean of all _x<sub>i</sub>_, _y&#772;_ the arithmetic mean of all _y<sub>i</sub>_, _s<sub>x</sub>_ the standard deviation for all _x<sub>i</sub>_, and s<sub>y</sub> the standard deviation for all _y<sub>i</sub>_.
+where _r<sub>xy</sub>_ is the Pearson correlation coefficient, _n_ the number of observations in one data series, _<span style="text-decoration: overline;">x</span>_ the arithmetic mean of all _x<sub>i</sub>_, _<span style="text-decoration: overline;">y</span>;_ the arithmetic mean of all _y<sub>i</sub>_, _s<sub>x</sub>_ the standard deviation for all _x<sub>i</sub>_, and s<sub>y</sub> the standard deviation for all _y<sub>i</sub>_.
 
 Let's assume, the data series to be correlated are stored in arrays <code>A1:A100</code> and <code>B1:B100</code>, thus _n = 100_:
 
