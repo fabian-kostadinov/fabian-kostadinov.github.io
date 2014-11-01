@@ -101,6 +101,9 @@ Other authors take a less critical stance. Chen and Navet (2007) [3] &#40;who by
 ### Previous
 * Part 2: [Evolving Trading Strategies With Genetic Programming - Encoding Trading Strategies]({% post_url 2014-09-03-evolving-trading-strategies-with-genetic-programming-encoding-trading-strategies %})
 
+### Next
+* Part 4: [Evolving Trading Strategies With Genetic Programming - GP Parameters And Operators]({% post_url 2014-11-01-evolving-trading-strategies-with-genetic-programming-gp-parameters-and-operators %})
+
 ----
 
 # References
