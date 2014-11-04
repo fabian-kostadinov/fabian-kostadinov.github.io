@@ -1,15 +1,27 @@
 ---
 layout: post
-title: Testing for Time Series Cointegration with R
+title: Testing Time Series for Cointegration
 tags: [statistics, timeseries, cointegration]
 ---
 Cointegration is an important concept when dealing with time series data. Here's the corresponding [definition on Wikipedia](http://en.wikipedia.org/wiki/Cointegration):
 
 <blockquote>Cointegration is a statistical property of time series variables. Two or more time series are cointegrated if they share a common stochastic drift.</blockquote><!--more-->
 
-In other words, if both time series are non-stationary _and_ they share a trend together (which can be explained through the existence of a common cause), then they are _cointegrated_. Cointegration is an often encountered feature of economic or financial time series. A typical text book example is a country's consumption and income. The more people earn, the more they have left to consume - of course assuming stable prices. Both time series usually grow over time. We would therefore assume consumption and income to be cointegrated time series.
+In other (rather non-scientific) words, if both time series are non-stationary _and_ they share a trend together (which can be explained through the existence of a common cause), then they are _cointegrated_.
 
-Or consider an investor who wants to build a portfolio. Most stocks in the S&P 500 index are probably cointegrated with the index itself. Some stocks might actually be cointegrated with each other, making them candidates for a pairs trading strategy. For cointegrated stocks, a significant deviation between the two stocks will soon close again. There are some really interesting articles out there on this topic, see the references section.
+Cointegration is not the same as correlation!
+<iframe width="560" height="315" src="//www.youtube.com/embed/vrryb49jbIo" frameborder="0" allowfullscreen></iframe>
+
+<div class="message">
+<em>Correlation</em> measures the co-movement between two time series, it answers the question: How much do they move together? It does not guarantee that the two measures stay close to each other in the long-run.<br/>
+<br/>
+<em>Cointegration</em> means that two time series will not deviate substantially from each other, yet when they do, the gap will be closed sooner or later again.</div>
+
+For this reason, it is certainly possible for two time series to be correlated but not cointegrated, cointegrated but not correlated, both or none.
+
+Cointegration is an often encountered feature of economic or financial time series. A typical text book example is a country's consumption and income. The more people earn, the more they have left to consume - of course assuming stable prices. Both time series usually grow over time. We would therefore assume consumption and income to be cointegrated time series.
+
+Or consider an investor who wants to build a portfolio. For cointegrated stocks, a significant deviation between the two stocks will soon close again. An example would probably be gold and silver prices. If the two deviate significantly from each other, an arbitrage opportunity exists. (Someone could buy the relatively cheaper metal and sell the relatively more expensive metal, waiting for the gap to close again.) There are some really interesting articles out there on this topic, see the references section.
 
 What we need is a statistical test for cointegration. There are different such tests, but the most common one is probably the [Augmented Dickey-Fuller (ADF) test](http://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test). The ADF test returns a negative value. The more negative this value is, the higher the probability that the null hypothesis - "There is no cointegration present in the compared time series." - can be rejected. Whereas the ADF test is available for nearly all statistics software, unfortunately there is no simple Excel formula for it. (There is however an [AddIn provided by Kurt Annen](http://www.web-reg.de/adf_addin.html).)
 
