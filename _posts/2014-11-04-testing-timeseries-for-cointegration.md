@@ -49,6 +49,10 @@ The function returns a _Dickey Fuller_ statistical value, and, thankfully, also 
 
 # References
 
+This is a very good description on what cointegration between time series is:
+
+* [http://www.kva.se/globalassets/priser/nobel/2003/sciback_ek_en_03.pdf](http://www.kva.se/globalassets/priser/nobel/2003/sciback_ek_en_03.pdf)
+
 Gekkoquant.com has some nice articles on ADF tests, cointegration, statistical arbitrage etc.:
 
 * [http://gekkoquant.com/2012/12/17/statistical-arbitrage-testing-for-cointegration-augmented-dicky-fuller/](http://gekkoquant.com/2012/12/17/statistical-arbitrage-testing-for-cointegration-augmented-dicky-fuller/)
