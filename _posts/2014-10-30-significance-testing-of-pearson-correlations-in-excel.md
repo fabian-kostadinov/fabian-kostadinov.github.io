@@ -110,3 +110,5 @@ _Examples:_ Let _p = 0.05_ (5% probability of being wrong), _n = 100_ (therefore
 
 * Calculating _t_ for a given _p_: <code>=T.INV(1-0.05/2;98)</code> = <code>=TINV(0.05;98)</code> = 1.9844675.
 * Calculating _p_ for a given _t_: <code>=2*(1-T.DIST(1.9844675;98;true))</code> = <code>=TDIST(1.9844675;98)</code> = 0.05;
+
+By the way, there is a nice [blog post about t-tests in Excel](http://www.real-statistics.com/students-t-distribution/t-distribution-basic-concepts/).
