@@ -31,6 +31,10 @@ Finviz's lean design is just to my taste. The front site for every stock feature
 Link: [http://www.stockspinoffs.com/](http://www.stockspinoffs.com/)  
 Want to invest in spinoffs? Then this is your site. Although the website does not cover all US spinoffs, there are regular updates about many different ones with the most important information provided to you for free. Once you like an idea, you can still start doing your own research on the upcoming spinoff, but the site is definitely a great starting point.
 
+## Spinoff Monitor
+Link: [http://spinoffmonitor.com/](http://spinoffmonitor.com/)  
+A neat site if you are interested in special situation stocks including restructurings, spinoffs and bankruptcy. All this website does is list different stocks currently in a special situation. You can subscribe with your email to get a weekly digest. A great place to get a first idea, which you can then research further.
+
 ## Investopedia
 Link: [http://www.investopedia.com/](http://www.investopedia.com/)  
 The best website on the internet when it comes to educating yourself in stock investing and economics. Lots of articles on ratios, fundamentals, technical indicators, micro- and macroeconomic topics and so on.
