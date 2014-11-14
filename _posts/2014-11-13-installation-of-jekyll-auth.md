@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Installation of Jekyll Auth
+title: Installation of Jekyll-Auth
 tags: [jekyll-auth]
 ---
-These are (hopefully) complete installation instructions for Jekyll Auth.
+These are (hopefully) complete installation instructions for Jekyll-Auth.
 
-__Attention:__ Before you try and install [Jekyll Auth](https://github.com/benbalter/jekyll-auth), it is crucial to understand that Jekyll Auth will _only_ work if you have a GitHub organization account which allows you to create teams. Having only a personal, (free or paid) account is _not_ enough for Jekyll to work.<!--more-->
+__Attention:__ Before you try and install [Jekyll-Auth](https://github.com/benbalter/jekyll-auth), it is crucial to understand that Jekyll-Auth will _only_ work if you have a GitHub organization account which allows you to create teams. Having only a personal, (free or paid) account is _not_ enough for Jekyll to work.<!--more-->
 
 ----
 
@@ -13,7 +13,7 @@ _Step 1:_ Make sure you have a [Heroku account](http://www.heroku.com). A free o
 
 ----
 
-_Step 2:_ Make sure you have [Heroku Toolbelt](https://toolbelt.heroku.com/) installed. You will probably need to use your Heroku login information. When I first tried to <code>bundle install</code> Jekyll Auth (see below), it worked, but I received this warning message:
+_Step 2:_ Make sure you have [Heroku Toolbelt](https://toolbelt.heroku.com/) installed. You will probably need to use your Heroku login information. When I first tried to <code>bundle install</code> Jekyll-Auth (see below), it worked, but I received this warning message:
 {% highlight console linenos %}
 Your bundle is complete!  
 Use `bundle show [gemname]` to see where a bundled gem is installed.  
@@ -52,7 +52,7 @@ All developers need to register their application before getting started. A regi
 
 ----
 
-_Step 6:_ Make sure you have Ruby installed. Jekyll Auth depends on Ruby (and other stuff).
+_Step 6:_ Make sure you have Ruby installed. Jekyll-Auth depends on Ruby (and other stuff).
 
 ----
 
@@ -61,7 +61,7 @@ _Step 7:_ Make sure you have [Ruby's bundler](http://bundler.io/) installed.
 
 ----
 
-_Step 8:_ Create a local clone of the [Jekyll Auth repository available on GitHub](https://github.com/benbalter/jekyll-auth).
+_Step 8:_ Create a local clone of the [Jekyll-Auth repository available on GitHub](https://github.com/benbalter/jekyll-auth).
 
 ----
 
@@ -131,7 +131,7 @@ Enter the GitHub Team ID. Be aware that you _cannot_ use a private (paid or unpa
 ----
 
 _Step 12:_
-Inside your local clone of Jekyll Auth, create a file named <code>.env</code>. Put the following lines into this file providing your own OAuth2 Client ID, Client Secret and the GitHub Team ID.
+Inside your local clone of Jekyll-Auth, create a file named <code>.env</code>. Put the following lines into this file providing your own OAuth2 Client ID, Client Secret and the GitHub Team ID.
 
 {% highlight console %}
 GITHUB_CLIENT_SECRET=abcdefghijklmnopqrstuvwxyz0123456789
@@ -142,7 +142,7 @@ GITHUB_TEAM_ID=12345
 ----
 
 _Step 13:_
-Before we are ready to push our local clone of Jekyll Auth to the remote Heroku server, we first need to add the Gemfile.lock to the repository:
+Before we are ready to push our local clone of Jekyll-Auth to the remote Heroku server, we first need to add the Gemfile.lock to the repository:
 {% highlight console %}
 git add -f Gemfile.lock
 git commit -m "Added Gemfile.lock"
