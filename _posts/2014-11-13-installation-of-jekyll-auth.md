@@ -157,7 +157,7 @@ Now we are finally ready to push everything to the remote Heroku server: <code>g
 ----
 
 _Step 15:_
-Open a browser and navigate to the Heroku URL <code>https://my-new-cool-herokuapp.herokuapp.com</code>. You should be automatically redirected to a GitHub page asking for authorization: <code>Authorize application - my-cool-new-herokuapp by @my-team-id would like permission to access your account</code>. You can click on <code>Authorize application</code>.
+Open a browser and navigate to the Heroku URL <code>https://my-new-cool-herokuapp.herokuapp.com</code>. You should be automatically redirected to a GitHub page asking for authorization: <code>Authorize application - my-cool-new-heroku-app by @my-team-id would like permission to access your account</code>. You can click on <code>Authorize application</code>.
 
 ----
 
