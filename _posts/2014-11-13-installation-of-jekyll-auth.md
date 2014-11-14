@@ -30,7 +30,7 @@ _Step 3:_ If you've installed Heroku Toolbelt, you will probably have to recreat
 
 ----
 
-_Step 4:_ Use Heroku Toolbelt to [create a new Heroku app](https://devcenter.heroku.com/articles/creating-apps): <code>heroku create my-new-cool-heroku-app</code>. Your website will be available at <code>http://my-new-cool-heroku-app.herokuapp.com</code>, and it will have a git account to push to called <code>git@heroku.com:my-new-cool-heroku-app.git</code>.
+_Step 4:_ Use Heroku Toolbelt to [create a new Heroku app](https://devcenter.heroku.com/articles/creating-apps): <code>heroku create my-new-cool-heroku-app</code>. Your website will be available at <code>https://my-new-cool-heroku-app.herokuapp.com</code>, and it will have a git account to push to called <code>git@heroku.com:my-new-cool-heroku-app.git</code>.
 
 ----
 
