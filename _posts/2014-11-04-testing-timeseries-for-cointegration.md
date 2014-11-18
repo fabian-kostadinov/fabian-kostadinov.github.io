@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Testing Time Series for Cointegration
+comments: true
 tags: [statistics, timeseries, cointegration]
 ---
 Cointegration is an important concept when dealing with time series data. Here's the corresponding [definition on Wikipedia](http://en.wikipedia.org/wiki/Cointegration):

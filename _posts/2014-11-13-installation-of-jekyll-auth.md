@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Installation of Jekyll-Auth
+comments: true
 tags: [jekyll-auth]
 ---
 These are (hopefully) complete installation instructions for Jekyll-Auth. The next figure shows the conceptual workflow of Jekyll-Auth in combination with a repository on GitHub.com. This is how Jekyll-Auth works.<!--more-->

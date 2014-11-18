@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Error Correction Model
+comments: true
 tags: [statistics, error correction model]
 ---
 Here are two great introductory videos on error correction models.<!--more-->
