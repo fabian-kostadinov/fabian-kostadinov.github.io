@@ -3,11 +3,20 @@ layout: post
 title: Installation of Jekyll-Auth
 tags: [jekyll-auth]
 ---
-These are (hopefully) complete installation instructions for Jekyll-Auth.
+These are (hopefully) complete installation instructions for Jekyll-Auth. The next figure shows the conceptual workflow of Jekyll-Auth in combination with a repository on GitHub.com. This is how Jekyll-Auth works.<!--more-->
 
-__Attention:__ Before you try and install [Jekyll-Auth](https://github.com/benbalter/jekyll-auth), it is crucial to understand that Jekyll-Auth will _only_ work if you have a GitHub organization account which allows you to create teams. Having only a personal, (free or paid) account is _not_ enough for Jekyll to work.<!--more-->
+![Jekyll-Auth Workflow](/public/img/2014-11-13-jekyll-auth.jpg "Jekyll-Auth Workflow")
 
-----
+* On GitHub.com, there exists an organization _foo-organization_ containing a team _foo-team_ and a repository _foo-repository_. _foo-repository_ is private, therefore only members of _foo-team_ can view or modify its contents.
+* Although the repository contains a complete Jekyll-enabled website, GitHub pages is not used to host any of this content. Instead, all users only work on the <code>master</code> branch (or any other branch except a GitHub pages <code>gh-pages</code> branch). 
+* The website's content is not accessible publicly. Instead, on Heroku an app is running - it's a Jekyll server enhanced with Jekyll-Auth functionality.
+* There are currently two users pushing and pulling to _foo-repository_ on GitHub.com: Anna and Bob. Both users are members of _foo-organization_ and of _foo-team_.
+* Bob is an ordinary GitHub user. He works on a local clone of _foo-repository_. Whenever he has changes, he simply pushes them to the remote repository.
+* Anna is also a GitHub user, hence she has her own local clone of _foo-repository_. However, unlike Bob, she is also responsible for hosting the website's content so that it is really accessible _as_ a fully functional website (and not only as files) to all members of _foo-team_. In her local version of the repository, besides having a local copy of all files in _foo-repository_, she additionally has an (installed and configured) version of Jekyll-Auth. Anna has two responsibilities. Like Bob she can work on the website's content. But at certain predefined points in time, she can also update the hosted website running on Jekyll as a Heroku app.
+* The hosted website is accessible under the URL <code>https://my-foo-heroku.herokuapp.com</code>. Whenever a user wants to access this site, Heroku redirects him to a GitHub authorization page, where he must provide his GitHub username and password. Heroku also sends Client ID, Client Secret as well as organization ID and/or team ID (e.g. "@foo-organization/foo-team") to GitHub. GitHub now tries to authenticate the user, and if he is a member of _foo-organization_ and _foo-team_ and is allowed to access _foo-repository_, then he is granted access to the website's content. In the example, Charles is no organization/team member and is denied access to the website.
+* Access rights to files and folders are specified inside the _foo-repository_'s _&#95;config.yml_ file.
+
+#Installation instructions
 
 _Step 1:_ Make sure you have a [Heroku account](http://www.heroku.com). A free one will be sufficient for most needs.
 
@@ -24,9 +33,11 @@ Post-install message from heroku:
 {% endhighlight %}
 If this shows up, you need to first uninstall Heroku gem: <code>gem uninstall heroku</code>. Heroku gem is deprecated and it will interfere with your Heroku Toolbelt installation, so make sure you actually uninstalled it.
 
+This is a step-by-step installation instruction.
+
 ----
 
-_Step 3:_ If you've installed Heroku Toolbelt, you will probably have to recreate SSH keys, otherwise your local Heroku Toolbelt will not be able to push files to the remote server. Create a key <code>ssh-keygen -t rsa</code>, then add the key to Heroku <code>heroku keys:add</code>.
+_Step 3:_ If you've installed Heroku Toolbelt, you will probably have to recreate SSH keys, otherwise your local Heroku Toolbelt will not be able to push files to the remote server. Create a key <code>ssh-keygen -t rsa</code>, then add the key to Heroku <code>heroku keys:add</code>. Make sure that you __do not mistakenly publish your private RSA key file__ together with the rest of the website!
 
 ----
 
@@ -132,17 +143,17 @@ Enter the GitHub Team ID. Be aware that you _cannot_ use a private (paid or unpa
 
 _Step 12:_
 Inside your local clone of Jekyll-Auth, create a file named <code>.env</code>. Put the following lines into this file providing your own OAuth2 Client ID, Client Secret and the GitHub Team ID.
-
 {% highlight console %}
 GITHUB_CLIENT_SECRET=abcdefghijklmnopqrstuvwxyz0123456789
 GITHUB_CLIENT_ID=qwertyuiop0001
-GITHUB_TEAM_ID=12345
+GITHUB_TEAM_ID=@foo-organization/foo-team
 {% endhighlight %}
+I'm not entirely sure, but you will probably have to put an @ at the beginning of the organization/team ID as in the example given.
 
 ----
 
 _Step 13:_
-Before we are ready to push our local clone of Jekyll-Auth to the remote Heroku server, we first need to add the Gemfile.lock to the repository:
+We are not yet ready to push our local clone of Jekyll-Auth to the remote Heroku server. We still need to add the Gemfile.lock to the repository:
 {% highlight console %}
 git add -f Gemfile.lock
 git commit -m "Added Gemfile.lock"
@@ -152,11 +163,27 @@ Be aware that we use the <code>-f</code> parameter to enforce adding this file. 
 ----
 
 _Step 14:_
-Now we are finally ready to push everything to the remote Heroku server: <code>git push heroku master</code>.
+In the _&#95;config.yml_ file you can specify which directories and files are accessible without authentication and which are not. By default, all access requires authorization except for the _drafts_ directory. You can actually use regular expressions to specify the files and directories. The following denies access to all parts of the site except for the _drafts_ directory.
+{% highlight yaml %}
+jekyll_auth:
+  whitelist:
+    - drafts?
+{% endhighlight %}
+Using regexes, you can also reverse the logic, allowing access to everything except _drafts_:
+{% highlight yaml %}
+jekyll_auth:
+  whitelist:
+    - "^((?!draft).)*$"
+{% endhighlight %}
 
 ----
 
 _Step 15:_
+Now we are finally ready to push everything to the remote Heroku server: <code>git push heroku master</code>.
+
+----
+
+_Step 16:_
 Open a browser and navigate to the Heroku URL <code>https://my-new-cool-herokuapp.herokuapp.com</code>. You should be automatically redirected to a GitHub page asking for authorization: <code>Authorize application - my-cool-new-heroku-app by @my-team-id would like permission to access your account</code>. You can click on <code>Authorize application</code>.
 
 ----
