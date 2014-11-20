@@ -9,7 +9,9 @@ This is a non-exhaustive list of websites on stock market investing (and trading
 
 ## Yahoo Finance
 Link: [http://finance.yahoo.com/](http://finance.yahoo.com/)  
-Everyone knows this one. Still one of the best websites on stocks on the net. I particularly enjoy the news section on individual stocks. The message board can be informative sometimes, too. Same thing with the stock's key statistics. There even is information on stock options available. Oh, and did I mention the historical data download? One of my most favorite features above all.
+Everyone knows this one. Still one of the best websites on stocks on the net. I particularly enjoy the news section on individual stocks. The message board can be informative sometimes, too. Same thing with the stock's key statistics. There even is information on stock options available. Oh, and did I mention the historical data download? One of my most favorite features above all.  
+What is probably less known is that Yaoo Finance also has a section with multiples by sectors and industries available at [http://biz.yahoo.com/p/s_conameu.html](http://biz.yahoo.com/p/s_conameu.html). This is really helpful to compare multiples like P/E, P/B or ROE of a single company to the rest of the sector or industry.  
+One drawback is that data quality at Yahoo Finance is not always the best. So you have to be careful with the information you receive.
 
 ## Google Finance
 Link: [http://www.google.com/finance/](http://www.google.com/finance)  
@@ -25,7 +27,8 @@ One particular nice feature of this site is that it displays analyst estimates a
 
 ## Finviz.com
 Link: [http://www.finviz.com/](http://www.finviz.com/)  
-Finviz's lean design is just to my taste. The front site for every stock features the most important fundamentals on a single page. In contrast to many other stock market sites the website is not clustered with blinking banners and ads. There is also a stock screener with similar capabilities as the one provided by Google Finance.
+Finviz's lean design is just to my taste. The front site for every stock features the most important fundamentals on a single page. In contrast to many other stock market sites the website is not clustered with blinking banners and ads. There is also a stock screener with similar capabilities as the one provided by Google Finance.  
+When it comes to doing research on sectors and industries, Finviz beats even Yahoo Finance. You can adjust the stock screener to display only a certain sector and industry and then screen through all different sorts of multiples for all the stocks displayed.
 
 ## Stock Spinoffs
 Link: [http://www.stockspinoffs.com/](http://www.stockspinoffs.com/)  
