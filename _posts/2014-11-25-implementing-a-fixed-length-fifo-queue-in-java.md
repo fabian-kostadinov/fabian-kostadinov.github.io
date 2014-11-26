@@ -137,21 +137,17 @@ public class NumberFixedLengthFifoQueue implements Queue<Number> {
 	}	
 }
 {% endhighlight %}
-The queue "rolls" through the ring. Adding a new element at the head of the queue automatically removes the oldest element in the queue - no copying of arrays or resetting of object references required. Unlike with linked lists we can actually access each element in the ring directly with the <code>get</code> method. Finally, we can create a subclass of our queue object which will graciously roll over as new values are added into the ring queue.
+The queue "rolls" through the ring. Adding a new element at the head of the queue automatically removes the oldest element in the queue - no copying of arrays or resetting of object references required. Unlike with linked lists we can actually access each element in the ring directly with the <code>get</code> method. Finally, we can create a subclass of our queue object which will graciously roll over as new values are added into the queue/ring.
 {% highlight java %}
 public class RollingMovingAverage extends NumberFixedLengthFifoQueue {
 
-	private int maSize;
 	private float maNumerator;
 	private float maValue;
-	private int leftIndex, rightIndex;
 	
-	public RollingMovingAverage(Number[] initialValues, int maSize) {
+	public RollingMovingAverage(Number[] initialValues) {
 		super(initialValues);
-		if (maSize > initialValues.length) {
-			throw new IllegalArgumentException("Moving average size cannot be greater than the number of values.");
-		}
-		this.maSize = maSize;
+		maNumerator = 0.0f;
+		maValue = 0.0f;
 		initialize();
 	}
 	
@@ -166,31 +162,31 @@ public class RollingMovingAverage extends NumberFixedLengthFifoQueue {
 	
 	@Override
 	public boolean offer(Number newest) {
-		maNumerator -= ring[leftIndex].floatValue();
+		maNumerator -= ring[index].floatValue();
 		
 		boolean res = super.offer(newest);
-		updateMovAvgIndices();
 		
-		maNumerator += ring[rightIndex].floatValue();
-		maValue = maNumerator / (float) maSize;
+		maNumerator += ring[getHeadIndex()].floatValue();
+		maValue = maNumerator / (float) ring.length;
 		
 		return res;
 	}
 	
 	private void initialize() {
-		for (int i = previousIndex(index), n = 0; n < maSize; i = previousIndex(i), n++) {
+		for (int i = previousIndex(index), n = 0; n < ring.length; i = previousIndex(i), n++) {
 			maNumerator += ring[i].floatValue();
 		}
-		maValue = maNumerator / (float) maSize;
-		updateMovAvgIndices();
-	}
-	
-	private void updateMovAvgIndices() {
-		rightIndex = getHeadIndex();
-		leftIndex = rightIndex - maSize + 1;
-		if (leftIndex < 0) {
-			leftIndex = ring.length - (maSize - (rightIndex + 1));
-		}
-	}
+		maValue = maNumerator / (float) ring.length;
+	}	
 }
+{% endhighlight %}
+We can use the class now. The length of the moving average is initially set through the length of the array given to its constructor.
+{% highlight java %}
+Integer[] initialMovAvgFrame = { 0, 1, 2, 3 };
+RollingMovingAverage ma = new RollingMovingAverage(initialMovAvgFrame);
+ma.getValue(); // returns 1.5
+ma.add(4);
+ma.getValue(); // returns 2.5
+ma.add(-1);
+ma.getValue(); // returns 2
 {% endhighlight %}
