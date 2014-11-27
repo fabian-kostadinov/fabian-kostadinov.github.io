@@ -39,7 +39,7 @@ This is a step-by-step installation instruction.
 
 ----
 
-_Step 3:_ If you've installed Heroku Toolbelt, you will probably have to recreate SSH keys, otherwise your local Heroku Toolbelt will not be able to push files to the remote server. Create a key <code>ssh-keygen -t rsa</code>, then add the key to Heroku <code>heroku keys:add</code>. Make sure that you __do not mistakenly publish your private RSA key file__ together with the rest of the website!
+_Step 3:_ If you've installed Heroku Toolbelt, you will probably have to recreate SSH keys, otherwise your local Heroku Toolbelt will not be able to push files to the Heroku server. There is this [article at heroku.com on the use of SSH keys](https://devcenter.heroku.com/articles/keys) if you want to know more about this. Create a key <code>ssh-keygen -t rsa</code>, then add the key to Heroku <code>heroku keys:add</code>. Make sure that you __do not mistakenly publish your private RSA key file__ together with the rest of the website!
 
 ----
 
