@@ -25,3 +25,6 @@ _Factor Analysis - Model Representation - Part 3_
 _Factor Analysis - Model Representation - Part 4_
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/-XBqfU4AzFE" frameborder="0" allowfullscreen></iframe>
+
+These four videos are just the introduction to the topic. There is a [whole playlist on factor analysis covering much more](https://www.youtube.com/playlist?list=PLwJRxp3blEvaOTZfSKXysxRmi6gXJf5gP).
+
