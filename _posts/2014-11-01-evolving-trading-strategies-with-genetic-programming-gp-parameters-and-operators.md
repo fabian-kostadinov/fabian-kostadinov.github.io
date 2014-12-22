@@ -48,6 +48,7 @@ Interestingly, from my experience this problem is significantly reduced when swi
 * Part 3: [Evolving Trading Strategies With Genetic Programming - Data]({% post_url 2014-09-22-evolving-trading-strategies-with-genetic-programming-data %})
 
 ### Next
+* Part 5: [Evolving Trading Strategies With Genetic Programming - Fitness Functions]({% post_url 2014-12-22-evolving-trading-strategies-with-genetic-programming-fitness-functions %})
 
 ----
 
