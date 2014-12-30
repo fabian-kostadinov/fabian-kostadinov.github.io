@@ -128,7 +128,7 @@ Git remote heroku added
 Awesome. Let's teach Heroku about our GitHub app.
 What's your GitHub Client ID?
 {% endhighlight %}
-Here we need to enter the GitHub OAuth Client ID.
+Here we need to enter the GitHub OAuth Client ID. Copy and paste the Client ID you received in step 5.
 
 ----
 
@@ -137,7 +137,7 @@ _Step 11e:_
 ...
 What's your GitHub Client Secret?
 {% endhighlight %}
-Then enter the GitHub Client Secret.
+Then enter the GitHub Client Secret. Copy and paste the Client Secret you received in step 5.
 
 ---
 
