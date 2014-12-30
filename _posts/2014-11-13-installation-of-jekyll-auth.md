@@ -20,6 +20,8 @@ These are (hopefully) complete installation instructions for Jekyll-Auth. To und
 
 #Installation instructions
 
+This is a step-by-step installation instruction.
+
 _Step 1:_ Make sure you have a [Heroku account](http://www.heroku.com). A free one will be sufficient for most needs.
 
 ----
@@ -34,8 +36,6 @@ Post-install message from heroku:
  !    For API access, see: https://github.com/heroku/heroku.rb
 {% endhighlight %}
 If this shows up, you need to first uninstall Heroku gem: <code>gem uninstall heroku</code>. Heroku gem is deprecated and it will interfere with your Heroku Toolbelt installation, so make sure you actually uninstalled it.
-
-This is a step-by-step installation instruction.
 
 ----
 
@@ -81,6 +81,13 @@ _Step 8:_ Create a local clone of the [Jekyll-Auth repository available on GitHu
 _Step 9:_ Navigate to your local clone. There should be a <code>Gemfile</code> in your repository's directory. Change this file so that it looks like this:
 {% highlight Ruby %}
 source "https://rubygems.org"
+
+gem 'jekyll-auth'
+{% endhighlight %}
+
+If you receive an error message stating 'certificate verify failed' this refers to using _https_ instead of _http_ in your Gemfile. In case you don't care about a secured connection, change the Gemfile like this:
+{% highlight Ruby %}
+source "http://rubygems.org"
 
 gem 'jekyll-auth'
 {% endhighlight %}
