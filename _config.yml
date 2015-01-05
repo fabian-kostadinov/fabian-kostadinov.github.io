@@ -3,6 +3,9 @@ markdown:         redcarpet
 highlighter:      rouge
 
 encoding:         "utf-8"
+safe:             true
+lsi:              false
+
 
 # Permalinks
 permalink:        pretty
