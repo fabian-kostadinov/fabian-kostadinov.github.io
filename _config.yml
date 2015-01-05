@@ -1,11 +1,7 @@
 # Dependencies
 markdown:         redcarpet
-highlighter:      rouge
-
-encoding:         "utf-8"
-safe:             true
-lsi:              false
-
+highlighter:      pygments
+#highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
