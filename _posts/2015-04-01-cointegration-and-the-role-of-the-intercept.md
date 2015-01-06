@@ -103,7 +103,7 @@ Here's the output.
   </td>
 </tr>
 </table>
-In both situations the Dickey-Fuller value is much lower than the 5% threshold of -3.43, and thus _p-value_ < 0.05. This means that we can be more than 95% confident that the two time series are indeed cointegrated (in the short term).
+In both situations the Dickey-Fuller value is much lower than the 5% threshold of -2.86 (regression model without trend) or -3.41 (regression model with trend), and thus _p-value_ < 0.05. This means that we can be more than 95% confident that the two time series are indeed cointegrated (in the short term).
 
 ----
 
