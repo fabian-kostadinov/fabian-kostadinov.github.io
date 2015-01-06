@@ -47,7 +47,7 @@ The residuals clearly show a long-term negative trend. Using stock B to estimate
 
 <code>Price A<sub>i</sub> = intercept + hedgeRatio * Price B<sub>i</sub> + Error<sub>i</sub></code>
 
-We forced the _intercept_ to be 0. Therefore, _Price A_ is a linear combination of _Price B_  - hence the _hedgeRatio_ (or _beta_) plus an error term (the residual). The sum of the residuals is necessariyl 0 in an OLS regression. Therefore, the residual plot is centered around the 0 line. Furthermore, there is only a single hedge ratio value for all observations. Stock B constantly slightly outperforms stock A over the years, and hence the residuals have the observed bias.
+We forced the _intercept_ to be 0. Therefore, _Price A_ is a linear combination of _Price B_  - hence the _hedgeRatio_ (or _beta_) plus an error term (the residual). The sum of the residuals is necessarily 0 in an OLS regression. Therefore, the residual plot is centered around the 0 line. Furthermore, there is only a single hedge ratio value for all observations. Stock B constantly slightly outperforms stock A over the years, and hence the residuals have the observed bias.
 
 Let's introduce a non-zero intercept.
 {% highlight R %}
@@ -103,7 +103,7 @@ Here's the output.
   </td>
 </tr>
 </table>
-In both situations the Dickey-Fuller value is much lower than the 5% threshold of, and thus _p-value_ < 0.05. This means that we can be more than 95% confident that the two time series are indeed cointegrated (in the short term).
+In both situations the Dickey-Fuller value is much lower than the 5% threshold of -3.43, and thus _p-value_ < 0.05. This means that we can be more than 95% confident that the two time series are indeed cointegrated (in the short term).
 
 ----
 
@@ -117,11 +117,11 @@ From the video:
 </blockquote>
 Another [good explanation can be found in this discussion thread](http://stats.stackexchange.com/questions/44647/which-dickey-fuller-test-should-i-apply-to-a-time-series-with-an-underlying-mode).
 
-Stock prices nearly always have a long-term trend, they are not stationary. Furthermore, their levels (original prices) are always different from 0, therefore an intercept is required in the ADF test. Hence:
+Stock prices nearly always have a long-term trend, they are not stationary. Furthermore, their levels (original prices) are always different from 0, therefore an intercept is required in the ADF test.
+
+However, remember that before we were not looking at stock prices. Instead, we were looking at residuals, i.e. spreads between two price series. If the residuals are stationary, then we know that both time series are mean-reverting, which indicates that they are cointegrated and a good candidate for a pair trading strategy. Hence:
 {% highlight R %}
 adfTest(m$residuals, lags = 0, type = "ct")
 {% endhighlight %}
-
-However, remember that before we were not looking at stock prices. Instead, we were looking at residuals, i.e. spreads between two price series. If the residuals are stationary, then we know that both time series are mean-reverting, which indicates that they are cointegrated and a good candidate for a pair trading strategy.
 
 
