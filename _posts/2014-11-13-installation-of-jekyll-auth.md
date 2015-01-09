@@ -164,7 +164,7 @@ _Step 11f:_
 ...
 What's your GitHub Team ID?
 {% endhighlight %}
-Enter the GitHub Team ID. Be aware that you _cannot_ use a private (paid or unpaid) account's username, it _must_ be a team created with an organizational account. The complete entry will look like <code>@foo-organization/foo-team</code>. Don't forget the at sign @ before the organization.
+Enter the GitHub Team ID. Be aware that you _cannot_ use a private (paid or unpaid) account's username, it _must_ be a team created with an organizational account. The complete entry will look like <code>@foo-organization/foo-team</code>. Don't forget the _at_ sign @ before the organization.
 
 ----
 
@@ -175,7 +175,6 @@ GITHUB_CLIENT_SECRET=abcdefghijklmnopqrstuvwxyz0123456789
 GITHUB_CLIENT_ID=qwertyuiop0001
 GITHUB_TEAM_ID=@foo-organization/foo-team
 {% endhighlight %}
-I'm not entirely sure, but you will probably have to put an @ at the beginning of the organization/team ID as in the example given.
 
 ----
 
@@ -185,7 +184,34 @@ We are not yet ready to push our local clone of Jekyll-Auth to the remote Heroku
 git add -f Gemfile.lock
 git commit -m "Added Gemfile.lock"
 {% endhighlight %}
-Be aware that we use the <code>-f</code> parameter to enforce adding this file. If you do not provide the parameter git might refuse to add the file to the repository because it is actually ignored in <code>.gitignore</code>.
+Be aware that we use the <code>-f</code> parameter to enforce adding this file. If you do not provide the parameter git might refuse to add the file to the repository because it is actually ignored in <code>.gitignore</code>. In this case you might end up with the following error message:
+{% highlight shell-session %}
+git push heroku master
+
+Counting objects: 46, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (37/37), done.
+Writing objects: 100% (46/46), 10.14 KiB, done.
+Total 46 (delta 6), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Ruby app detected
+remote: -----> Compiling Ruby/NoLockfile
+remote:  !
+remote:  !     Gemfile.lock required. Please check it in.
+remote:  !
+remote:
+remote:  !     Push rejected, failed to compile Ruby app
+remote:
+remote: Verifying deploy...
+remote:
+remote: !       Push rejected to edb-website.
+remote:
+To https://git.heroku.com/my-new-cool-herokuapp.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/my-new-cool-herokuapp.git'
+{% endhighlight %}
 
 ----
 
