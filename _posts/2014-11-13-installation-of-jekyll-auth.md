@@ -45,6 +45,24 @@ _Step 3:_ If you've installed Heroku Toolbelt, you will probably have to recreat
 
 _Step 4:_ Use Heroku Toolbelt to [create a new Heroku app](https://devcenter.heroku.com/articles/creating-apps): <code>heroku create my-new-cool-heroku-app</code>. Your website will be available at <code>https://my-new-cool-heroku-app.herokuapp.com</code>, and it will have a git account to push to called <code>git@heroku.com:my-new-cool-heroku-app.git</code>.
 
+Important: Creating a Heroku app in this way will automatically deploy it to servers in the USA. [As is explained in this tutorial on devcenter.herokuapp.com](https://devcenter.heroku.com/articles/app-migration), in case you want the app to run on servers located in Europe, you must first create a new dummy app, create a fork with the corrected region and then delete the dummy app.
+{% highlight shell-session %}
+# First create a dummy app running on US servers
+heroku create my-dummy-app-in-us
+
+# The next line will create fork of the first app, but running on Heroku servers in Europe
+heroku fork -a my-dummy-app-in-us my-new-cool-heroku-app --region eu
+
+# Don't forget to delete the dummy app afterwards
+heroku apps:destroy my-dummy-app-in-us
+
+ !    WARNING: Potentially Destructive Action
+ !    This command will destroy my-dummy-app-in-us (including all add-ons).
+ !    To proceed, type "my-dummy-app-in-us" or re-run this command with --confirm my-dummy-app-in-us
+> my-dummy-app-in-us
+Destroying my-dummy-app-in-us (including all add-ons)... done
+{% endhighlight %}
+
 ----
 
 _Step 5:_ The Heroku app will access the GitHub account to perform an authorization check for every user. If the user is registered with the corresponding GitHub account, she will also be allowed to access the Heroku app. Hence, the Heroku app must be registered with GitHub. Upon registration, you will receive a OAuth2 Client ID and Client Secret which will be needed at a later step.
