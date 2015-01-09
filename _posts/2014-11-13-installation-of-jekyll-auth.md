@@ -164,7 +164,7 @@ _Step 11f:_
 ...
 What's your GitHub Team ID?
 {% endhighlight %}
-Enter the GitHub Team ID. Be aware that you _cannot_ use a private (paid or unpaid) account's username, it _must_ be a team created with an organizational account.
+Enter the GitHub Team ID. Be aware that you _cannot_ use a private (paid or unpaid) account's username, it _must_ be a team created with an organizational account. The complete entry will look like <code>@foo-organization/foo-team</code>. Don't forget the at sign @ before the organization.
 
 ----
 
