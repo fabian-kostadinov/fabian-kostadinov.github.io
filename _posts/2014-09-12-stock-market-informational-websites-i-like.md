@@ -5,7 +5,7 @@ comments: true
 tags: [investing]
 ---
 
-This is a non-exhaustive list of websites on stock market investing (and trading) I like for various reasons.<!--more-->
+This is a non-exhaustive list of websites on stock market investing (and trading) I like for various reasons.<span class="more"></span>
 
 ## Yahoo Finance
 Link: [http://finance.yahoo.com/](http://finance.yahoo.com/)  

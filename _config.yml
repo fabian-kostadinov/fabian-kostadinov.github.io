@@ -17,7 +17,8 @@ author:
   url:            http://fabian-kostadinov.github.io
   email:          none@none.com
   
-excerpt_separator: <!--more-->
+#excerpt_separator: <!--more-->
+excerpt_separator: <span class="more"></span>
 
 exclude:          [_ignore]
 

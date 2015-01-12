@@ -6,7 +6,7 @@ tags: [statistics, timeseries, cointegration]
 ---
 Cointegration is an important concept when dealing with time series data. Here's the corresponding [definition on Wikipedia](http://en.wikipedia.org/wiki/Cointegration):
 
-<blockquote>Cointegration is a statistical property of time series variables. Two or more time series are cointegrated if they share a common stochastic drift.</blockquote><!--more-->
+<blockquote>Cointegration is a statistical property of time series variables. Two or more time series are cointegrated if they share a common stochastic drift.</blockquote><span class="more"></span>
 
 In other (rather non-scientific) words, if both time series are non-stationary _and_ they share a trend together (which can be explained through the existence of a common cause), then they are _cointegrated_.
 

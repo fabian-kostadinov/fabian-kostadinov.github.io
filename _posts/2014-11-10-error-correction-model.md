@@ -4,7 +4,7 @@ title: Error Correction Model
 comments: true
 tags: [statistics, error correction model]
 ---
-Here are two great introductory videos on error correction models.<!--more-->
+Here are two great introductory videos on error correction models.<span class="more"></span>
 
 _Part 1:_
 

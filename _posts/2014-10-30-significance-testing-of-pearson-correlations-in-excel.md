@@ -4,7 +4,7 @@ title: Significance Testing of Pearson Correlations in Excel
 comments: true
 tags: [statistics, correlation, significance]
 ---
-Yesterday, I wanted to calculate the significance of Pearson correlation coefficients between two series of data. I knew that I could use a Student's t-test for this purpose, but I did not know how to do this in Excel 2013. And, to be honest, I did not really understand the documentation of Excel's <code>T.TEST</code> formula. So, here is what I did.<!--more-->
+Yesterday, I wanted to calculate the significance of Pearson correlation coefficients between two series of data. I knew that I could use a Student's t-test for this purpose, but I did not know how to do this in Excel 2013. And, to be honest, I did not really understand the documentation of Excel's <code>T.TEST</code> formula. So, here is what I did.<span class="more"></span>
 
 ## Pearson correlation coefficient
 First, I had to calculate the corresponding Pearson correlation coefficients according to this formula:

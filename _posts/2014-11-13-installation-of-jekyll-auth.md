@@ -4,7 +4,7 @@ title: Installation of Jekyll-Auth
 comments: true
 tags: [jekyll-auth]
 ---
-These are (hopefully) complete installation instructions for Jekyll-Auth. To understand how Jekyll-Auth works, you need a conceptual understanding on how [Rack-Jekyll](https://github.com/adaoraul/rack-jekyll/) and [Rack](https://github.com/rack/rack) work. The next figure shows the conceptual workflow of Jekyll-Auth in combination with a repository on GitHub.com. This is how Jekyll-Auth works.<!--more-->
+These are (hopefully) complete installation instructions for Jekyll-Auth. To understand how Jekyll-Auth works, you need a conceptual understanding on how [Rack-Jekyll](https://github.com/adaoraul/rack-jekyll/) and [Rack](https://github.com/rack/rack) work. The next figure shows the conceptual workflow of Jekyll-Auth in combination with a repository on GitHub.com. This is how Jekyll-Auth works.<span class="more"></span>
 
 ![Jekyll-Auth Workflow](/public/img/2014-11-13-installation-of-jekyll-auth.png "Jekyll-Auth Workflow")
 

@@ -4,7 +4,7 @@ title: Factor Analysis
 comments: true
 tags: [statistics, factor analysis]
 ---
-There is a good series of "cowboy-style" youtube videos on factor analysis.<!--more-->
+There is a good series of "cowboy-style" youtube videos on factor analysis.<span class="more"></span>
 
 _Factor Analysis - An Introduction (Part 1):_
 <iframe width="560" height="315" src="//www.youtube.com/embed/MB-5WB3eZI8" frameborder="0" allowfullscreen></iframe>

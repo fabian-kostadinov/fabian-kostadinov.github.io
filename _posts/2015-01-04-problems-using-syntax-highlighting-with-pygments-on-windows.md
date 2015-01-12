@@ -8,7 +8,7 @@ I wanted to turn on code syntax highlighting using rouge for my blog by adding t
 {% highlight yaml %}
 highlighter:   rouge
 {% endhighlight %}
-Whereas this worked perfectly on my local Windows machine, I ran into problems with Jekyll on GitHub.<!--more--> After searching for some time, I found [this article](http://www.codeproject.com/Articles/809846/Blogging-on-GitHub) from August 2014 where it stated:
+Whereas this worked perfectly on my local Windows machine, I ran into problems with Jekyll on GitHub.<span class="more"></span> After searching for some time, I found [this article](http://www.codeproject.com/Articles/809846/Blogging-on-GitHub) from August 2014 where it stated:
 <blockquote>
 __Update: As of August 1, commiting a__ &#95;config.yml __that uses__ rouge __now causes "Page build failure" on GitHub with a misleading error message like "The file__ &#95;posts/2014-08-01-blah.md __contains syntax errors."__ Before you commit & push, you must set highlighter: pygments in &#95;config.yml, even if you don't care to install pygments locally.
 </blockquote>

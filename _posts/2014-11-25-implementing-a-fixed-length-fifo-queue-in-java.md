@@ -4,7 +4,7 @@ title: Implementing a Fixed-Length FIFO Queue in Java
 comments: true
 tags: [programming, java, queue]
 ---
-When working with time series data, one often needs to calculate sums of consecutive numbers for a predetermined time frame. Imagine for example calculating a moving average with a fixed size. Let's look at a very simply time series.<!--more-->
+When working with time series data, one often needs to calculate sums of consecutive numbers for a predetermined time frame. Imagine for example calculating a moving average with a fixed size. Let's look at a very simply time series.<span class="more"></span>
 {% highlight console %}
 [0  |1  |2  |3  |4  |5  |6  |7 ]
 {% endhighlight %}

@@ -24,6 +24,7 @@
  * Masthead
  * Navigation
  * Posts and pages
+ * Excerpt separator
  * Pagination
  * Reverse layout
  * Themes
@@ -496,6 +497,14 @@ tbody tr:nth-child(odd) th {
   color: inherit;
 }
 
+
+/*
+ * Excerpt separator
+ */
+.more {
+  display: none;
+}
+ 
 
 /*
  * Pagination
