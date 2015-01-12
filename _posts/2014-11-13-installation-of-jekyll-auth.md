@@ -6,7 +6,7 @@ tags: [jekyll-auth]
 ---
 These are (hopefully) complete installation instructions for Jekyll-Auth. To understand how Jekyll-Auth works, you need a conceptual understanding on how [Rack-Jekyll](https://github.com/adaoraul/rack-jekyll/) and [Rack](https://github.com/rack/rack) work. The next figure shows the conceptual workflow of Jekyll-Auth in combination with a repository on GitHub.com. This is how Jekyll-Auth works.<!--more-->
 
-![Jekyll-Auth Workflow](/public/img/2014-11-13-jekyll-auth.jpg "Jekyll-Auth Workflow")
+![Jekyll-Auth Workflow](/public/img/2014-11-13-installation-of-jekyll-auth.png "Jekyll-Auth Workflow")
 
 * On GitHub.com, there exists an organization _foo-organization_ containing a team _foo-team_ and a repository _foo-repository_. _foo-repository_ is private, therefore only members of _foo-team_ can view or modify its contents.
 * Although the repository contains a complete Jekyll-enabled website, GitHub pages is not used to host any of this content. Instead, all users only work on the <code>master</code> branch (or any other branch except a GitHub pages <code>gh-pages</code> branch). 
