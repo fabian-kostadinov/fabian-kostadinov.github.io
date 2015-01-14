@@ -80,7 +80,7 @@ __Minimize GP tree size__: This is a tricky one too. The stated goal is of cours
 
 ### Next
 
-* Part 6
+* Part 6: [Evolving Trading Strategies With Genetic Programming - Punishing Complexity]({% post_url 2015-01-14-evolving-trading-strategies-with-genetic-programming-punishing-complexity %})
 
 ----
 
