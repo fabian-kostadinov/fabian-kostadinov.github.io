@@ -25,7 +25,7 @@ This is a step-by-step installation instruction.
 
 ----
 
-_Prerequisite:_ Before you begin, you will need a repository that contains your website's content, that is all the HTML and CSS files, JavaScript code, your images etc. Make sure your local clone is up to date with your remote GitHub repository. I will call this your _website repository_.
+_Prerequisites:_ Before you begin, you will need a repository that contains your website's content, that is all the HTML and CSS files, JavaScript code, your images etc. Make sure your local clone is up to date with your remote GitHub repository. I will call this your _website repository_.
 
 ----
 
@@ -171,21 +171,11 @@ _Step 11f:_
 ...
 What's your GitHub Team ID?
 {% endhighlight %}
-Enter the GitHub Team ID. Be aware that you _cannot_ use a private (paid or unpaid) account's username, it _must_ be a team created with an organizational account. The complete entry will look like <code>@foo-organization/foo-team</code>. Don't forget the _at_ sign @ before the organization.
+Enter the GitHub Team ID. The team id is an integer number consisting of roughly six or seven digits, like <code>1234567</code>. Using the team's name will _not_ work! I have created [an extra post how to find your team id]({% post_url 2015-01-16-how-to-find-a-github-team-id %}). Be aware that you _cannot_ use a private (paid or unpaid) account's username, it _must_ be a team created with an organizational account.
 
 ----
 
 _Step 12:_
-Inside your local clone of Jekyll-Auth, create a file named <code>.env</code>. Put the following lines into this file providing your own OAuth2 Client ID, Client Secret and the GitHub Team ID.
-{% highlight console %}
-GITHUB_CLIENT_SECRET=abcdefghijklmnopqrstuvwxyz0123456789
-GITHUB_CLIENT_ID=qwertyuiop0001
-GITHUB_TEAM_ID=@foo-organization/foo-team
-{% endhighlight %}
-
-----
-
-_Step 13:_
 We are not yet ready to push our local clone of Jekyll-Auth to the remote Heroku server. We still need to add the Gemfile.lock to the repository:
 {% highlight console %}
 git add -f Gemfile.lock
@@ -222,7 +212,7 @@ error: failed to push some refs to 'https://git.heroku.com/my-new-cool-herokuapp
 
 ----
 
-_Step 14:_
+_Step 13:_
 In the _&#95;config.yml_ file you can specify which directories and files are accessible without authentication and which are not. By default, all access requires authorization except for the _drafts_ directory. You can actually use regular expressions to specify the files and directories. The following denies access to all parts of the site except for the _drafts_ directory.
 {% highlight yaml %}
 jekyll_auth:
@@ -238,12 +228,12 @@ jekyll_auth:
 
 ----
 
-_Step 15:_
+_Step 14:_
 Now we are finally ready to push everything to the remote Heroku server: <code>git push heroku master</code>.
 
 ----
 
-_Step 16:_
+_Step 15:_
 Open a browser and navigate to the Heroku URL <code>https://my-new-cool-herokuapp.herokuapp.com</code>. You should be automatically redirected to a GitHub page asking for authorization: <code>Authorize application - my-new-cool-new-heroku-app by @foo-organization/foo-team - would like permission to access your account</code>. You can click on <code>Authorize application</code>.
 
 ----
