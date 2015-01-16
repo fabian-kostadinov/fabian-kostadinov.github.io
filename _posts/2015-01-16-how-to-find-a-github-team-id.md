@@ -14,7 +14,7 @@ Once you have cURL installed, you first need to make sure that you are actually 
 
 Next, you need to create a personal access token. When using the GitHub API you in most cases access protected information, thus we need to authorize first. When logged in to your GitHub account, go to -> *Settings* -> *Applications* -> (Personal access tokens) *Generate new token*. Provide a name. Select <code>read:org</code>, leave the others or unselect them. Click *Generate token*. Copy the token to your clipboard.
 
-Open a shell. In the shell type by replacing the <code>&lt;very-long-access-token&gt;</code> with the actual access token and <code>&lt;org-name&gt;</code> with the organization's name:
+Open a shell. In the shell type by replacing the <code>&lt;very-long-access-token&gt;</code> with the actual access token and <code>&lt;org-name&gt;</code> with the organization's name. On Windows I had to use double quotes (") but maybe on Unix/Linux systems single quotes (') are presumed.
 {% highlight shell-session %}
 curl -H "Authorization: token <very-long-access-token>" https://api.github.com/orgs/<org-name>/teams
 
