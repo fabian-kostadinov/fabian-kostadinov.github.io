@@ -117,6 +117,14 @@ source "http://rubygems.org"
 gem 'jekyll-auth'
 {% endhighlight %}
 
+Another problem suddenly occurred connected to this step, and it took me quite some time to figure out what the problem was. At one point pushing my local repository to Heroku with <code>git push heroku master</code> suddenly failed, the error message said something about a method <code>ssl?</code> being not found. After searching for a significant amount of time I found [an article on how to deploy Ruby applications to Heroku from a Windows environment](https://devcenter.heroku.com/articles/bundler-windows-gemfile). The problem is that if you are working on a Windows machine (as I do) then you _must_ specify a version in your _Gemfile_. Your entry should thus look similar to this:
+{% highlight Ruby %}
+source "https://rubygems.org"
+
+gem 'jekyll-auth', '0.6.1'
+{% endhighlight %}
+Heroku is running a Linux environment, and some required libraries differ from the ones used in Windows. If you don't specify a version, then <code>git push heroku master</code> will call <code>rake assets:precompile</code> which again will call the <code>bundle exec jekyll-auth build</code> command. The Gemfile specified locally in your Windows environment will create a _Gemfile.lock_ file, which contains a list of the exact versions used locally. But this file will not be submitted from your local Windows computer to Heroku's Linux remote environment, only the Gemfile will be used. By default, the Gemfile simply downloads the most current version of Jekyll-Auth from somewhere, which can be a different version than the one you used locally. This behavior can lead to all sorts of strange compilation problems. Hence, you really should specify a Jekyll-Auth version. You can actually look on your local computer which versions of Jekyll-Auth are installed. On my machine I can find all different versions under <code>C:\Ruby200-x64\lib\ruby\gems\2.0.0\gems</code>.
+
 ----
 
 _Step 10:_ Then run <code>bundle install</code>. You might see a warning that <code>DL is deprecated, please use Fiddle</code>, which you can safely ignore.
