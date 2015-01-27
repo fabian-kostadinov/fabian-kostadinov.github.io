@@ -4,7 +4,7 @@ title: Cointegration and Total-Least-Squares Regression
 comments: true
 tags: [statistics, cointegration]
 ---
-I just stumbled over a very nice [article authored by Paul Teetor on the use of total least-squares-regression in contrast to ordinary-least-squares regression for cointegration tests](http://quanttrader.info/public/betterHedgeRatios.pdf). [This blog post](http://www.cerebralmastication.com/2010/09/principal-component-analysis-pca-vs-ordinary-least-squares-ols-a-visual-explination/) also explains the same topic.
+I just stumbled over a very nice [article authored by Paul Teetor on the use of total least-squares-regression in contrast to ordinary-least-squares regression for cointegration tests](http://quanttrader.info/public/betterHedgeRatios.pdf). [This blog post](http://www.cerebralmastication.com/2010/09/principal-component-analysis-pca-vs-ordinary-least-squares-ols-a-visual-explination/) also explains the same topic.<span class="more"></span>
 
 Let's quickly recall what we do when trying to find a working pairs trading strategy. First, we use one stock price time series to estimate another stock price time series. The linear regression model is <code>A = intercept + beta * B</code>, where A and B are both time series containing stock prices. From the regression estimation we retrieve the _hedge ratio_ (or _beta_ or regression _slope_) and an _intercept_. We can then compute the spreads _S_ as <code>S = A - (intercept + beta * B)</code>. Finally, we use an augmented Dickey-Fuller (ADF) test to find out whether the spreads are stationary. If they are, this implies that both stocks are in fact cointegrated. Gaps between the two stock prices will not persist infinitely long, but close after some time.
 
