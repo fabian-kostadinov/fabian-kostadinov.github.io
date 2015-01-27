@@ -119,9 +119,9 @@ Another [good explanation can be found in this discussion thread](http://stats.s
 
 Stock prices nearly always have a long-term trend, they are not stationary. Furthermore, their levels (original prices) are always different from 0, therefore an intercept is required in the ADF test.
 
-However, remember that before we were not looking at stock prices. Instead, we were looking at residuals, i.e. spreads between two price series. If the residuals are stationary, then we know that both time series are mean-reverting, which indicates that they are cointegrated and a good candidate for a pair trading strategy. Hence:
+However, remember that before we were not looking at stock prices. Instead, we were looking at residuals, i.e. spreads between two price series. If the residuals are stationary, then we know that both time series are mean-reverting, which indicates that they are cointegrated and a good candidate for a pair trading strategy. If the spreads have a clearly visible trend, then they are already guaranteed not to be stationary. Hence:
 {% highlight R %}
-adfTest(m$residuals, lags = 0, type = "ct")
+adfTest(m$residuals, lags = 0, type = "nc")
 {% endhighlight %}
 
 
