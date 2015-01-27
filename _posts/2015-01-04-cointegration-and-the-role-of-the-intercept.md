@@ -121,7 +121,7 @@ Stock prices nearly always have a long-term trend, they are not stationary. Furt
 
 However, remember that before we were not looking at stock prices. Instead, we were looking at residuals, i.e. spreads between two price series. If the residuals are stationary, then we know that both time series are mean-reverting, which indicates that they are cointegrated and a good candidate for a pair trading strategy. If the spreads have a clearly visible trend, then they are already guaranteed not to be stationary. Hence:
 {% highlight R %}
-adfTest(m$residuals, lags = 0, type = "nc")
+adfTest(m$residuals, lags = 0, type = "c")
 {% endhighlight %}
 
 
