@@ -48,3 +48,7 @@ As I said my code is quite a hack, but if anyone is interested in the source cod
 One should be aware that because [Prose requires a running gatekeeper server](https://github.com/prose/gatekeeper) that handles authorization and authentication with GitHub, I had to also install the gatekeeper server on Heroku. Thus, I ended up running two different server applications - Jekyll and Prose Gatekeeper.
 
 Finally, I had everything in place. With Prose and JSONForm I provided a framework for data manipulation through user input forms. In combination with all the other things I finally had created a simple, yet effective database management system based on GitHub, Jekyll, Prose and Heroku.
+
+----
+
+If you want to try out yourself, we made the code publicly available under [https://github.com/Eaternity/eaternity-database-public](https://github.com/Eaternity/eaternity-database-public).
