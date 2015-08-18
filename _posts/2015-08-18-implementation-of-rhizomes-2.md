@@ -4,7 +4,7 @@ title: Implementation of Rhizomes - Part 2
 comments: true
 tags: [rhizome]
 ---
-[In my last post on the implementation of rhizomes]({% post_url 2014-09-09-implementation-of-rhizomes %}) I still suggested using hash maps to store pairing, that is relations. It was just recently that I recognized that there is of course an even simpler and more concise way of storing relations: as a single, long bit string, where a bit is set to 1 if a relation is established.<span class="more"></span>
+[In my last post on the implementation of rhizomes]({% post_url 2014-09-09-implementation-of-rhizomes %}) I still suggested using hash maps to store pairings, that is relations. It was just recently that I recognized that there is of course an even simpler and more concise way of storing relations: as a single, long bit string, where a bit is set to 1 if a relation is established.<span class="more"></span>
 
 Let us assume for the moment that we use the Cantor pairing function already defined earlier:
 
