@@ -32,14 +32,14 @@ Here are corresponding plots:
 ![flat0](/public/img/2015-01-27-comparing-adf-functions-in-r-flat0.png "flat0")
 Notice the mean at the zero line and the absence of a trend.
 
-![flat0](/public/img/2015-01-27-comparing-adf-functions-in-r-flat20.png "flat20")
+![flat20](/public/img/2015-01-27-comparing-adf-functions-in-r-flat20.png "flat20")
 Notice the mean at the 20 line and the absence of a trend.
 
-![flat0](/public/img/2015-01-27-comparing-adf-functions-in-r-trend0.png "trend0")
+![trend0](/public/img/2015-01-27-comparing-adf-functions-in-r-trend0.png "trend0")
 Notice that the trending mean crosses the origin (0, 0) and the presence of a trend with slope 0.1.
 
-![flat0](/public/img/2015-01-27-comparing-adf-functions-in-r-trend20.png "trend20")
-Notice that the trendin mean crosses the (20, 0) point and the presence of a trend with slope 0.1
+![trend20](/public/img/2015-01-27-comparing-adf-functions-in-r-trend20.png "trend20")
+Notice that the trending mean crosses the (0, 20) point and the presence of a trend with slope 0.1.
 
 Next, I calculated ADF tests using both the <code>adf.test</code> function in the _tseries_ package and the <code>adfTest</code> function in the _fUnitRoots_ package. We must keep in mind the following few points:
 
