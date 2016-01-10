@@ -114,7 +114,7 @@ file://C:\\in\\?fileName=MyFile.txt
 Let's add a charset parameter to specify the file encoding to be used:
 
 {% highlight java %}
-file://C:/in/?fileName=MyFile.txt&charset=utf8
+file://C:/in/?fileName=MyFile.txt&charset=utf-8
 {% endhighlight %}
 
 Here's the full example:
@@ -130,8 +130,8 @@ CamelContext ctx = new DefaultCamelContext();
 RouteBuilder route = new RouteBuilder() {
 	@Override
 	public void configure() throws Exception {
-		from("file://C:/in/?fileName=MyFile.txt&charset=utf8")
-		.to("file://C:/out/?fileName=MyFile.txt&charset=utf8");
+		from("file://C:/in/?fileName=MyFile.txt&charset=utf-8")
+		.to("file://C:/out/?fileName=MyFile.txt&charset=utf-8");
 	}
 };
 ctx.addRoutes(route);
@@ -153,8 +153,8 @@ If you don't find this behavior useful, then you can adapt it. Let's tell Apache
 
 {% highlight java %}
 public void configure() throws Exception {
-	from("file://C:/in/?fileName=MyFile.txt&charset=utf8&noop=true")
-	.to("file://C:/out/?fileName=MyFile.txt&charset=utf8");
+	from("file://C:/in/?fileName=MyFile.txt&charset=utf-8&noop=true")
+	.to("file://C:/out/?fileName=MyFile.txt&charset=utf-8");
 }
 {% endhighlight %}
 
