@@ -171,7 +171,7 @@ public void configure() throws Exception {
 
 It's as easy as this.
 
-# Reading non-text files
+# Handling distinct input and output formats
 This is all good as long as you only intend to process files of the same input and output type. But what if your input file type is different from the target output file type? Neither the core nor the File2 component of Apache Camel provide direct support for such cases. There are different approaches to solve this, but basically all of them come down to file type conversion. Class <code>org.apache.camel.model.RouteDefinition</code> extends class <code>org.apache.camel.model.ProcessorDefinition</code>. ProcessorDefinition in turn offers the following interesting methods:
 
 {% highlight java %}
