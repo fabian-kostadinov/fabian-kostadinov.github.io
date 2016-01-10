@@ -6,7 +6,7 @@ tags: [temis, luxid, development]
 ---
 Skill cartridges built with Luxid 7 usually contain a mix of customized and standard software artefacts. These artefacts can be data artefacts such as tailored vocabularies or taxonomies, syntactic or similar rules to extract certain types of entities, or they can be a set of configuration files that parameterize the skill cartridge at hand. For this reason, skill cartridges must be treated as productive code and must therefore be subject to a build and deployment process as well as be checked into a version control system. The good news is that Temis has made it really easy to set up your own version of this process. The bad news is that at least in Luxid 7.0.1 there does not seem to exist any documentation on the corresponding tools.<span class="more"></span>
 
-## Skill Cartridge Life-Cycle
+## Skill Cartridge Development Life-Cycle
 The first thing to understand is the typical development-cycle of a skill cartridge.
 
 1. The skill cartridge is shipped by the vendor as a zip file. The zip file contains both a "bare-bone" or empty skill cartridge plus possibly a file called _customization.zip_. This file again contains one or several default dictionaries that may eventually be loaded into the skill cartridge.
@@ -86,7 +86,7 @@ Assuming you really want to have full control over the build process in CES your
 
 - _scinstall.bat_: Installs a bare-bone skill cartridge in a CES project. Empty here means that the skill cartridge at this moment does not yet contain any vocabulary, taxonomy etc. These must be loaded using the <code>crimport.bat</code> tool.
 - _crimport.bat_: Import knowledge into a Studio project, for example a vocabulary, taxonomy etc.
-- _crassign.bat_: Assigns the skill cartridge to a Studio)project
+- _crassign.bat_: Assigns the skill cartridge to a Studio-project
 - _crsynchro.bat_: Synchronize the still empty skill cartridge with the imported knowledge. This step "charges" the vocabulary or taxonomy into the skill cartridge.
 - _crexportsca.bat_: Build and export the skill cartridge as a single .sca file to the file system.
 
