@@ -207,7 +207,7 @@ Or the other way round:
 {% highlight java %}
 public void configure() throws Exception {
 	from("file://C:/in/?fileName=MyFile.txt&noop=true")
-	.unmarshal(new PdfTextDataFormat())
+	.marshal(new PdfTextDataFormat())
 	.to("file://C:/out/?fileName=MyFile.pdf");
 }
 {% endhighlight %}
