@@ -5,7 +5,7 @@ comments: true
 tags: [genetic programming, trading]
 ---
 # Part 5
-At the core of every genetic programming (GP) strategy is the _fitness function_. The fitness function specifies what the whole evolutionary process is looking for. Every individual is assigned a _fitness value_, which is computed byw the fitness function. Individuals with a high fitness value stand a higher chance to be selected for reproduction and thus to create offspring. Finding a "good" fitness function is one of the most important design aspects of the development process. It is rarely the case that the first idea for a fitness function already produces great results, and defining one requires quite a deep expnderstanding of the problem domain.<span class="more"></span> The following list contains a few necessary design decisions:
+At the core of every genetic programming (GP) strategy is the _fitness function_. The fitness function specifies what the whole evolutionary process is looking for. Every individual is assigned a _fitness value_, which is computed by the fitness function. Individuals with a high fitness value stand a higher chance to be selected for reproduction and thus to create offspring. Finding a "good" fitness function is one of the most important design aspects of the development process. It is rarely the case that the first idea for a fitness function already produces great results, and defining one requires quite a deep understanding of the problem domain.<span class="more"></span> The following list contains a few necessary design decisions:
 
 * Minimizing vs. maximizing fitness values
 * Single-objective vs. multi-objective
