@@ -292,4 +292,4 @@ public void configure() throws Exception {
 }
 {% endhighlight %}
 
-This command will essentially "copy" all files from _C:/in_ to _C:/out_. In case the input directories has sub-directories that need to be processed too, then we simply add the <code>recursive=true</code> parameter.
+This command will essentially "copy" all files from _C:/in_ to _C:/out_. In case the input directory has sub-directories that need to be processed too we simply add the <code>recursive=true</code> parameter: <code>from("file://C:/in?noop=true&recursive=true")</code>.
