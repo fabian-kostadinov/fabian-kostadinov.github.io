@@ -233,10 +233,14 @@ public PdfTextDataFormat implements DataFormat {
 
 		// Use a tool like PDFBox to create text from your bytes.
 		String text = ...;
+		
+		// If we want, we can set the unmarshalled text back into the exchange's out message
 		Message out = exchange.getOut();
 		out.setBody(text);
 
 		// Don't close input stream here
+		
+		return text;
 	}
 }
 {% endhighlight %}
