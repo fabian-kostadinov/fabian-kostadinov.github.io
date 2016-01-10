@@ -281,3 +281,15 @@ Fortunately, you don't really need to build your own PDF-to-text data format. In
 You may have to update camel-tika's pom.xml though, as it seems to not have been updated in a while.
 
 Here's another blog post on [how to do marshalling](http://blogs.sourceallies.com/2013/02/getting-started-with-camel-marshalling/).
+
+# Processing a directory of files
+In case we'd like to process a whole directory of files (without subdirectories), we simply omit the <code>fileName=XYZ</code> parameter.
+
+{% highlight java %}
+public void configure() throws Exception {
+	from("file://C:/in/?noop=true")
+	.to("file://C:/out/");
+}
+{% endhighlight %}
+
+This command will essentially "copy" all files from _C:/in_ to _C:/out_. In case the input directories has sub-directories that need to be processed too, then we simply add the <code>recursive=true</code> parameter.
