@@ -53,15 +53,21 @@ In case you're working with SCB, then the process is actually similar. Just pres
 
 ### Writing custom Java code
 When you want to write your own skill cartridges in Java or Groovy you can either write so called "scripts" or build whole applications. A script is simply a single Java or Groovy class that extends a predefined annotator class and has no further dependencies (e.g. to other .jar files). It then provides several method stubs where you can fill in your code. The whole architecture is similar to writing Java servlets, however there are important differences. In Luxid 7.0.1 the corresponding Java API is unfortunately not very well documented, you'll have to specifically ask Temis for more information. For some functionality I wanted to try out, I received an exception message stating that this particular function was not implemented yet. I don't know about the status in Luxid 7.1, but I expect some advancements in this regard.  
-Luxid 7.0.1 admin web app still contained an "install script" button that was apparently removed in version 7.1. The documentation guide 1.1 of the REST API does not mention this explicitly, but you actually can install and uninstall a script - or also a machine-learning model (.klm file) created in Luxid 6.3 - through this a REST API call:
+Luxid 7.0.1 admin web app still contained an "install script" button that was apparently removed in version 7.1. The documentation guide 1.1 of the REST API does not mention this explicitly, but you actually can install and uninstall a script through this a REST API call:
 
 {% highlight console %}
 curl -T MyScript.java http://server:8091/temis/v1/annotation/scripts/
 {% endhighlight %}
 
+In case you want to install a machine-learned model (.klm file) instead of a script then the REST URL is slightly different:
+
+{% highlight console %}
+curl -T MyModel.klm http://server:8091/temis/v1/annotation/models/
+{% endhighlight %}
+
 If you want to write your own customized skill cartridges I highly recommend having a look at the code samples that are delivered together with every Luxid installation. In a default installation, these code samples can be found in <code>C:\Temis\Luxid7\IDE\doc</code>.
 
-Writing scripts in many cases is not sufficient. Imagine that for any reason you want to open a database connection in your custom Java code. You'll need a bunch of third-party .jar files to do so plus possibly some configuration files etc. All of these must be packaged and deployed together with your .sca file. These dependencies _must_ be placed in an internal folder called /???, otherwise they can not be found from inside your Java code. Remember that every .sca is just fundamentally just a zip file that contains a specific folder structure. With the tools I'll show you further below it is actually pretty easy to write an [Ant](http://ant.apache.org/) or [Maven](http://maven.apache.org/) script that automates the build process for this .sca file.
+Writing scripts in many cases is not sufficient. Imagine that for any reason you want to open a database connection in your custom Java code. You'll need a bunch of third-party .jar files to do so plus possibly some configuration files etc. All of these must be packaged and deployed together with your .sca file. These dependencies _must_ be placed in an internal folder called <code>/plugins</code>, otherwise they can not be found from inside your Java code. Remember that every .sca is fundamentally just a zip file that contains a specific folder structure. With the tools I'll show you further below it is actually pretty easy to write an [Ant](http://ant.apache.org/) or [Maven](http://maven.apache.org/) script that automates the build process for this .sca file.
 
 One problem with Webstudio, SCB or admin web app is that when you push the export button you end up with a prebuilt .sca file. This file can sometimes be several hundred MB, because it may contain many different lexica. You don't want to check in the whole file to version control but only those parts that actually have changed. As I've said above, every .sca file is nothing but a zip file. You can always unpack it to a folder in your file system which is part of your version control system. The version control system should then be able to see only the differences between the new and the old version for each file of the unpacked .sca.
 
