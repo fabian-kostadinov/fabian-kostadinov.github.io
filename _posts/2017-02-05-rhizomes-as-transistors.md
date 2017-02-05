@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rhizomes as a transistors
+title: Rhizomes as transistors
 comments: true
 tags: [rhizome, transistor]
 ---
