@@ -20,7 +20,7 @@ title:            Fabian Kostadinov
 #tagline:          None
 url:              http://fabian-kostadinov.github.io
 paginate:         5
-baseurl:          /
+#baseurl:          /
 author:
   name:           Fabian Kostadinov
   url:            http://fabian-kostadinov.github.io
