@@ -28,16 +28,16 @@ title: Home
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Previous&emsp;<span class="fa fa-chevron-circle-right"></span></a>
+    <a class="pagination-item older" href="{{ '/page' | relative_url }}{{paginator.next_page}}">Previous&emsp;<span class="fa fa-chevron-circle-right"></span></a>
   {% else %}
     <span class="pagination-item older">Previous&emsp;<span class="fa fa-chevron-circle-right"></span></span>
   {% endif %}
   <!-- <span class="pagination-item">Nothing here</span> -->
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}"><span class="fa fa-chevron-circle-left"></span>&emsp;Next</a>
+      <a class="pagination-item newer" href="{{ '/' | relative_url }}"><span class="fa fa-chevron-circle-left"></span>&emsp;Next</a>
     {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}"><span class="fa fa-chevron-circle-left"></span>&emsp;Next</a>
+      <a class="pagination-item newer" href="{{ '/page' | relative_url }}{{paginator.previous_page}}'><span class="fa fa-chevron-circle-left"></span>&emsp;Next</a>
     {% endif %}
   {% else %}
     <span class="pagination-item newer"><span class="fa fa-chevron-circle-left"></span>&emsp;Next</span>
