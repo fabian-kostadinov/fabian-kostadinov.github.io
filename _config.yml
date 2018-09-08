@@ -1,8 +1,13 @@
 # Dependencies
 #markdown:         redcarpet
 markdown:         kramdown
+kramdown:
+  input:          GFM
+  auto_ids:       true
+  syntax_highlighter: rouge
 #highlighter:      pygments
 highlighter:      rouge
+
 
 # Gems/plugins
 plugins:             [jekyll-paginate]
