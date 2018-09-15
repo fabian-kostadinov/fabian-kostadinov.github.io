@@ -140,7 +140,7 @@ public class OpenNLPTokenizer extends SegmentingTokenizerBase /* which itself ex
 ```
 The constructor takes three arguents:
 
-- _AttributeFactory_: An attribute factory is simply a factory that creates instances of _Attribute_. Lucene has a very nice default implementation that is sufficient in most cases _AttributeFactory.DEFAULT_ATTRIBUTE_FACTORY_.
+- _AttributeFactory_: An attribute factory is simply a factory that creates instances of _Attribute_. Lucene has a very nice default implementation that is sufficient in most cases _AttributeFactory.DEFAULT_ATTRIBUTE_FACTORY_. A Lucene attribute consists of an interface and an implementing class. The default attribute factory uses reflection to find the proper implementing class for an attribute interface. The naming convention is: For an interface _FooAttribute_ there must exist an implementation class _FooAttributeImpl_. You will have to write your own attribute factory only in case you plan to not follow this naming convention for any reason.
 - _NLPSentenceDetectorOp_: This is a class performing sentence detection provided by Lucene OpenNLP library.
 - _NLPTokenizerOp_: This is a class performing tokenization provided by Lucene OpenNLP library.
 
