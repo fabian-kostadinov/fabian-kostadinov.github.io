@@ -309,6 +309,7 @@ The best way to understand Lucene is probably to read through its official docum
 
 ## Other articles
 
+- [SolR's OpenNLP integration for language analysis](https://github.com/apache/lucene-solr/blob/master/solr/solr-ref-guide/src/language-analysis.adoc#opennlp-integration)
 - [Exploring SolR's OpenNLP integrations](https://opensourceconnections.com/blog/2018/08/06/intro_solr_nlp_integrations/)
 - [Building a custom analyzer, tokenizer and token filter in Lucene](https://citrine.io/2015/02/15/building-a-custom-analyzer-in-lucene/)
 - [Full Text Search of Dialogues with Apache Lucene: A Tutorial](https://www.toptal.com/database/full-text-search-of-dialogues-with-apache-lucene)
