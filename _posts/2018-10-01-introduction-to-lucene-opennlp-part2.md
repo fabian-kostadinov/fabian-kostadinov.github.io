@@ -68,7 +68,7 @@ Our search yielded no results! How is this possible? Well. This is where things 
 
 > Since Lucene does not yet index token types, in order to make that information available to queries, it is necessary to push the type either to a payload or as a synonym token using either TypeAsPayloadFilterFactory or TypeAsSynonymFilterFactory.
 
-If you are like me you simply didn't understand this piece of information while reading it the first time and simply took a whole-hearted decision to ignore it. What does this mean? Well, it means exactly what it states: For any reason known only to the developers of the Lucene library the _type_ token is not indexed by default. And of course this is exactly what OpenNLP uses behind the scenes. In class _OpenNLPPOSFilter_ you will find these two lines:
+If you are like me you didn't understand this piece of information while reading it the first time and simply took a whole-hearted decision to ignore it. What does this mean? Well, it means exactly what it states: For any reason known only to the developers of the Lucene library the _type_ token is not indexed by default. And of course this is exactly what OpenNLP uses behind the scenes. In class _OpenNLPPOSFilter_ you will find these two lines:
 ```java
 private final TypeAttribute typeAtt = (TypeAttribute)this.addAttribute(TypeAttribute.class);
 
@@ -137,7 +137,7 @@ JJ NN => 2 hits
 	The quick brown fox jumped over the lazy baby.
 	Mr. Robot is a great TV-series.
 ```
-Congratulations, we found two indexed documents containing both an adjective and a noun. Since search terms are __OR__ed together the order of our POS tags in the query does not matter. "JJ NN" will yield the same results as "NN JJ". Furtherore, since words and their POS tags are treated as synonyms we can also mix them in our query. Note however that the adjective "brown" might be treated synonymously with the POS tag "JJ", but the opposite is not true!
+Congratulations, we found two indexed documents containing both an adjective and a noun. Since search terms are **OR**ed together the order of our POS tags in the query does not matter. "JJ NN" will yield the same results as "NN JJ". Furtherore, since words and their POS tags are treated as synonyms we can also mix them in our query. Note however that the adjective "brown" might be treated synonymously with the POS tag "JJ", but the opposite is not true!
 
 Maybe if I find the time I'll write another piece how introduce order on our query terms. Searching for "JJ JJ NN" should not simply OR them together, but should preserve the sequence of query terms.
 
