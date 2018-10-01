@@ -295,9 +295,13 @@ lazy: JJ
 dogs: NNS
 .: .
 ```
-In part 2 of the tutorial we'll have a look how to search on the POS tags.
+In [part 2 of the tutorial]({% post_url 2018-10-01-introduction-to-lucene-opennlp-part2 %}) we'll have a look how to search on the POS tags.
 
 ----
+## Other articles
+
+* Part 2: [Introduction to Lucene 7 OpenNLP - Part 2]({% post_url 2018-10-01-introduction-to-lucene-opennlp-part2 %})
+
 ## Official Lucene documentation
 The best way to understand Lucene is probably to read through its official documentation. Each Lucene package is shipped with the relevant topics for the package. I recommend reading through these ones for a start:
 
@@ -307,7 +311,7 @@ The best way to understand Lucene is probably to read through its official docum
 4. [Documentation for package org.apache.lucene.search](https://lucene.apache.org/core/7_4_0/core/org/apache/lucene/search/package-summary.html)
 5. [Documentation for other Lucene packages](https://lucene.apache.org/core/7_4_0/core/overview-summary.html)
 
-## Other articles
+### Further material
 
 - [SolR's OpenNLP integration for language analysis](https://github.com/apache/lucene-solr/blob/master/solr/solr-ref-guide/src/language-analysis.adoc#opennlp-integration)
 - [Exploring SolR's OpenNLP integrations](https://opensourceconnections.com/blog/2018/08/06/intro_solr_nlp_integrations/)
