@@ -137,7 +137,7 @@ JJ NN => 2 hits
 	The quick brown fox jumped over the lazy baby.
 	Mr. Robot is a great TV-series.
 ```
-Congratulations, we found two indexed documents containing both an adjective and a noun. Since search terms are **OR**ed together the order of our POS tags in the query does not matter. "JJ NN" will yield the same results as "NN JJ". Furtherore, since words and their POS tags are treated as synonyms we can also mix them in our query. Note however that the adjective "brown" might be treated synonymously with the POS tag "JJ", but the opposite is not true!
+Congratulations, we found two indexed documents containing both an adjective and a noun. Since search terms are **OR**ed together the order of our POS tags in the query does not matter. "JJ NN" will yield the same results as "NN JJ". Furthermore, since words and their POS tags are treated as synonyms we can also mix them in our query. Note however that the adjective "brown" might be treated synonymously with the POS tag "JJ", but the opposite is not true!
 
 Maybe if I find the time I'll write another piece how introduce order on our query terms. Searching for "JJ JJ NN" should not simply OR them together, but should preserve the sequence of query terms.
 
@@ -146,5 +146,7 @@ Maybe if I find the time I'll write another piece how introduce order on our que
 ## Other articles
 
 ### Previous
-
 * Part 1: [Introduction to Lucene 7 OpenNLP - Part 1]({% post_url 2018-09-08-introduction-to-lucene-opennlp-part1 %})
+
+### Next
+* Part 3: [Introduction to Lucene 7 OpenNLP - Part 3]({% post_url 2018-10-06-introduction-to-lucene-opennlp-part3 %})
