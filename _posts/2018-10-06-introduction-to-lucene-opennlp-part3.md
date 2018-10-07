@@ -79,6 +79,9 @@ You have to read this sentence very carefully. See my mistake? AutomatonQuery, a
 * Part 1: [Introduction to Lucene 7 OpenNLP - Part 1]({% post_url 2018-09-08-introduction-to-lucene-opennlp-part1 %})
 * Part 2: [Introduction to Lucene 7 OpenNLP - Part 2]({% post_url 2018-10-01-introduction-to-lucene-opennlp-part2 %})
 
+### Next
+* Part 4: [Introduction to Lucene 7 OpenNLP - Part 4]({% post_url 2018-10-07-introduction-to-lucene-opennlp-part4 %})
+
 ### Further material
 
 * [Somewhat outdated article on automata in Lucene 4](https://opensourceconnections.com/blog/2013/02/21/lucene-4-finite-state-automaton-in-10-minutes-intro-tutorial/)

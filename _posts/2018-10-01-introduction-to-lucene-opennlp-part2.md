@@ -150,3 +150,4 @@ Maybe if I find the time I'll write another piece how introduce order on our que
 
 ### Next
 * Part 3: [Introduction to Lucene 7 OpenNLP - Part 3]({% post_url 2018-10-06-introduction-to-lucene-opennlp-part3 %})
+* Part 4: [Introduction to Lucene 7 OpenNLP - Part 4]({% post_url 2018-10-07-introduction-to-lucene-opennlp-part4 %})

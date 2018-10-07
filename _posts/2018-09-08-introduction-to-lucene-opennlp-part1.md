@@ -303,6 +303,7 @@ In [part 2 of the tutorial]({% post_url 2018-10-01-introduction-to-lucene-opennl
 ### Next
 * Part 2: [Introduction to Lucene 7 OpenNLP - Part 2]({% post_url 2018-10-01-introduction-to-lucene-opennlp-part2 %})
 * Part 3: [Introduction to Lucene 7 OpenNLP - Part 3]({% post_url 2018-10-06-introduction-to-lucene-opennlp-part3 %})
+* Part 4: [Introduction to Lucene 7 OpenNLP - Part 4]({% post_url 2018-10-07-introduction-to-lucene-opennlp-part4 %})
 
 ### Official Lucene documentation
 The best way to understand Lucene is probably to read through its official documentation. Each Lucene package is shipped with the relevant topics for the package. I recommend reading through these ones for a start:
