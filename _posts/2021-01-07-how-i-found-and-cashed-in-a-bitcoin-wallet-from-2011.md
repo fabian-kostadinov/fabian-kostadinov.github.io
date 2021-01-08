@@ -30,18 +30,18 @@ I was a bit paranoid, so I even checked the checksum using [GPG Suite](https://g
 
 Next problem was that I had no clue how to import my 2011 Bitcoin wallet.dat into Electrum. I searched around and found [this medium.com post from 2017](https://medium.com/@simonvc/i-found-an-old-bitcoin-wallet-1aeb2f32387a) that in the end turned out to be quite helpful yet leaving out some details. From what I understood from this site and other related material there was simply no way how to import my old wallet.dat file into Electrum, they were incompatible. 
 
-Instead, it was suggested to use _pywallet_, a Python 2.7 program that could read out old wallet.dat files from 2011 such as mine. The author of referred medium article had used a version of _pywallet_ available from https://github.com/jackjack-jj/pywallet/blob/master/pywallet.py. I cloned it into my local file system...
+Instead, it was suggested to use _pywallet_, a Python 2.7 program that could read out old wallet.dat files from 2011 such as mine. The author of referred medium article had used a version of _pywallet_ available from [https://github.com/jackjack-jj/pywallet/blob/master/pywallet.py](). I cloned it into my local file system...
 
 ...and faced the next problem. According to the [installation instructions](https://github.com/jackjack-jj/pywallet) it was required to pip install several Python 2.7 libraries that were entirely straight forward to install. My version of Mac OS X Catalina (10.15.7) is shipped with a Python version 2.7. However, I did not want to fiddle around with that version to avoid overwriting some system libraries with newer versions by mistake and potentially cause some Mac OS X processes to fail. Unfortunately, Python 2.7 does not properly support virtual environments. So, I decided to follow the MacPorts route.
 
 This is from pywallet's installation instructions:
-<code>
+```
 Mac OS X:
 1. Install MacPorts from http://www.macports.org/
 2. sudo port install python27 py27-twisted py27-pip py-bsddb python_select
 3. sudo port select --set python python27
 4. sudo easy_install ecdsa
-</code>
+```
 
 You might also run into issues if you don't have [xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) installed, which I fortunately had and did not have to bother about that any further.
 
@@ -49,7 +49,9 @@ I decided not to actually switch the Python version with MacPorts, but simply di
 
 On my new laptop I had created a copy of my old laptop's whole directory with the wallet.dat file. Then I ran pywallet:
 
-<code>/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/python2 ~/<path to pywallet>/pywallet.py --dumpwallet --datadir=~/<path to copy of Bitcoin wallet directory> > ~/wallet.dat.json</code>
+```bash
+/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/python2 ~/<path to pywallet>/pywallet.py --dumpwallet --datadir=~/<path to copy of Bitcoin wallet directory> > ~/wallet.dat.json
+```
 
 I was not sure this would work, because the wallet.dat might have been password protected. I decided to try my luck...
 
@@ -57,7 +59,7 @@ I was not sure this would work, because the wallet.dat might have been password 
 
 The json file contained lots and lots of different addresses, including their private and public keys. What a mess. A typical entry looked like so:
 
-<code>
+```json
 {
 "addr": "<this is an address>", 
 "compressed": false, 
@@ -68,11 +70,13 @@ The json file contained lots and lots of different addresses, including their pr
 "sec": "<51 char string>", 
 "secret": "<64 char string>"
 }
-</code>
+```
 
 After plenty of reading up I finally understood that Electrum required the 51 character string in the "sec" field. This is in essence a _wallet import format_ (WIF) Base58 encoded private key. In my situation, having still access to the old Bitcoin Core installation from 2011 I also knew exactly which address would contain the bitcoins. If I had not known that then I would have needed to go through the pain of extracting all addresses with a script and checking all of against some public website or service to see which one actually contains the bitcoins. This is described in just superficial details in already mentioned [medium.com article](https://medium.com/@simonvc/i-found-an-old-bitcoin-wallet-1aeb2f32387a). Pywallet actually contains a command for this purpose, where the blockchain address corresponds to the value of the "addr" field above.
 
-<code>python2 pywallet.py --balance=<blockchain address></code>
+```
+python2 pywallet.py --balance=<blockchain address>
+```
 
 Also, you might need to build in a small waiting time between requests to not get blocked by the blockchain information provider service.
 
