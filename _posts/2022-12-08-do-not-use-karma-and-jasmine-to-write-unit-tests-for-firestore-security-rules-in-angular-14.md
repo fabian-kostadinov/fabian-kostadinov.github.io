@@ -21,7 +21,7 @@ Using Firebase tools we can put all our Firestore security rules in a local <cod
 According to the documentation how to unit test Firestore Security Rules you can initialise a test environment like so:
 
 ```javascript
-Let testEnv = await initializeTestEnvironment({
+let testEnv = await initializeTestEnvironment({
     projectId: "demo-project-1234",
     firestore: {
         rules: fs.readFileSync("firestore.rules", "utf8")
