@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Do not use Karma & Jasmine to write unit tests for testing Firestone Security Rules in your Angular 14 app!
+title: Do not use Karma & Jasmine for unit testing Firestone Security Rules in your Angular app!
 comments: true
 tags: [firebase, firestore, angular, jest, karma, jasmine]
 ---
