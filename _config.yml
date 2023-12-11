@@ -34,6 +34,7 @@ exclude:          [_ignore]
 # Don't forget to add these to sitemap.xml
 pages_list:
   ABOUT:          '/about'
+  PUBLICATIONS:   '/publications'
   ARCHIVE:        '/archive'
   FEED:           '/atom.xml'
   
