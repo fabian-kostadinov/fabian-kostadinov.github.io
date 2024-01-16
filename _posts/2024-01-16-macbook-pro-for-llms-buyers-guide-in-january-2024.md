@@ -84,7 +84,7 @@ What is the effect of having more (V)RAM on your use cases? The answer can also 
 |32 GB|llama 7B mostly Q8\_0|6.67 GiB|6.74 B|Metal|99|tp 512|674.37 ± 0.63|
 |32 GB|llama 7B mostly Q8\_0|6.67 GiB|6.74 B|Metal|99|tg 128|40.67 ± 0.05|
 
-*There is no obvious impact at all on the t/s for PP or TG for both amounts of memory!*
+*There is no difference in inferencing speeds when running an 8-bit quantized Llama 7B model on the same Macbook Pro model with 96 GB vs 32 GB!*
 
 [Here's what Mr Sparc writes](https://github.com/ggerganov/llama.cpp/discussions/4167#discussioncomment-7670917):
 
@@ -93,6 +93,19 @@ What is the effect of having more (V)RAM on your use cases? The answer can also 
 In short: The main purpose of having enough memory is to allow loading the entire quantized model into memory. Once this is done it has no further substantial effect on the inferencing speed.
 
 This means: *Buying larger amounts of memory (e.g. 96 GB or even 128 GB) does not speed up your inferencing with LLMs, but it allows you to run a bigger LLM.*
+
+How much memory do the different models need? [This Reddit thread](https://www.reddit.com/r/LocalLLaMA/comments/157d89h/comment/jt43x4d/?utm_source=reddit&utm_medium=web2x&context=3) lists the following file sizes (on disk) for the 16 bit unquantized models. Also, according to [this thread](https://news.ycombinator.com/item?id=37067933) running a 70B unquantized Llama2 model would require ca 160 GB of memory, and a 64 GB Macbook Pro should be able to run a 70B quantized Llama2 model.
+
+|File size on disk|Model|
+|:-|:-|
+|129 GB|llama-2-70b|
+|129 GB|llama-2-70b-chat|
+|25 GB|llama-2-13b|
+|25 GB|llama-2-13b-chat|
+|13 GB|llama-2-7b|
+|13 GB|llama-2-7b-chat|
+
+As we can see the disk files are relatively large, but the quantization should decrease those figures.
 
 There are some commands you can run to re-allocate the VRAM assigned to the GPU process on your MX processor, see e.g. [here](https://www.hardware-corner.net/increase-mac-vram/). But keep in mind also that quantization can have a significant impact on the required disk/memory size of the LLM. Once more you should ask yourself whether it's worth all that money just for playing around? You can run the largest LLMs in a rented GPU for some time, that's probably cheaper than spending all that money on the highest amounts of memory on your laptop.
 
