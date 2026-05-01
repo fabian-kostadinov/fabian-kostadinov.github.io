@@ -44,7 +44,7 @@ And correspondingly:
 2. oliver = >> oliver
 3. oliver = >>> stan
 4. oliver = >>>> oliver
-5. oliver = >>>>> oliver
+5. oliver = >>>>> stan
 6. ...
 ```
 The pattern is clear. Depending on whether the number of nested pointings is odd or even, we arrive at Stan or at Oliver. The two chains oscillate between the same two values. If we write them out as sequences:
