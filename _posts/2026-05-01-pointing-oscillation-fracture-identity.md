@@ -92,7 +92,8 @@ It turns out that non-coincidence is not a single condition. There are many stru
 
 ## IV. A Taxonomy of Coincidence and Non-Coincidence
 Consider the following cases. In each one, we ask: do these two contextures coincide? And if not - or if so - why?
-Example 1: Structural impossibility of coincidence
+
+### Example 1: Structural impossibility of coincidence
 ```{code}
 C_1: Stan > Stan > Stan > Stan > Stan > ...
 C_2: Oliver > Oliver > Oliver > Oliver > Oliver > ...
@@ -102,7 +103,8 @@ Both contextures are constant sequences. C_1 always displays Stan; C_2 always di
 ∀n : C_1(n) ≠ C_2(n)
 ```
 And no phase-shift can help. There is no k such that C_1(n) = C_2(n+k), because C_1 only ever produces Stan and C_2 only ever produces Oliver. The value-sets are disjoint. Non-coincidence here is not an accident of position or starting point. It is logically guaranteed by the values themselves. This is non-coincidence as structural necessity.
-Example 2: Contingent non-coincidence due to index
+
+### Example 2: Contingent non-coincidence due to index
 ```{code}
 C_1: Stan > Stan > Stan > Stan > Stan > ...
 C_2: Oliver > Stan > Oliver > Stan > Oliver > ...
@@ -113,7 +115,8 @@ C_1(n) = Stan for all n
 C_2(n) = Oliver if n is even, Stan if n is odd
 ```
 So C_1(n) = C_2(n) if and only if n is odd. They coincide at every odd position and fail to coincide at every even position. The non-coincidence at even positions is not structural - it is contingent on the index. A different starting point for C_2, or a different choice of position, changes the result.
-Example 3: Mutual oscillation, phase-dependent coincidence
+
+### Example 3: Mutual oscillation, phase-dependent coincidence
 ```{code}
 C_1: Stan > Oliver > Stan > Oliver > Stan > ...
 C_2: Oliver > Stan > Oliver > Stan > Oliver > ...
@@ -127,7 +130,8 @@ But this non-coincidence is not structural. The value-sets are identical - both 
 ∃k=1 such that ∀n : C_1(n) = C_2(n+1)
 ```
 The non-coincidence is purely an artifact of starting point. Compare this to Example 1: the surface statement is the same (they never coincide), but the modal situation is entirely different. In Example 1, no shift can produce coincidence. Here, one step resolves everything. The observable fact of non-coincidence does not distinguish these two cases.
-Example 4: Asymmetric frequency, high rate of coincidence
+
+### Example 4: Asymmetric frequency, high rate of coincidence
 ```{code}
 C_1: Stan > Stan > Stan > Stan > Stan > Stan > ...
 C_2: Stan > Stan > Oliver > Stan > Stan > Oliver > ...
@@ -137,7 +141,8 @@ C_1 is constant; C_2 oscillates with period three, displaying Oliver only every 
 lim_{N→∞} |{n ≤ N : C_1(n) = C_2(n)}| / N = 2/3
 ```
 We can generalise: as Oliver appears less and less frequently in C_2 - as the period of oscillation lengthens - the frequency of coincidence approaches 1. In the limit, if Oliver disappears entirely from C_2, we arrive at the next case.
-Example 5: Total coincidence
+
+### Example 5: Total coincidence
 ```{code}
 C_1: Stan > Stan > Stan > Stan > Stan > ...
 C_2: Stan > Stan > Stan > Stan > Stan > ...
