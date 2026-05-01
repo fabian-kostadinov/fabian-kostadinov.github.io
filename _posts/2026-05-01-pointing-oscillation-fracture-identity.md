@@ -4,7 +4,6 @@ title: Pointing, Oscillation, and the Fracture of Identity
 comments: true
 tags: [gotthard günther, polycontexturality, proemial relation, philosophy]
 ---
-# Pointing, Oscillation, and the Fracture of Identity
 
 There is a well-known photograph - or rather, a well-known kind of image - in which Stan Laurel and Oliver Hardy point at each other simultaneously. Each one points at the other. Neither points at himself. The image is funny, and also a little vertiginous, because it is not immediately clear who is accusing whom, or whether the gesture means anything at all when it is perfectly mutual.
 It is worth taking that vertigo seriously. Let us try to say, from a philosophical perspective, exactly what is happening.
