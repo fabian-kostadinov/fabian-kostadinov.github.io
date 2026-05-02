@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nowhere Is Not Enough: Fractured Identity and the Proemial Relation as Channel
+title: Nowhere Is Not Enough - Fractured Identity and the Proemial Relation as Channel
 comments: true
 tags: [gotthard günther, polycontexturality, proemial relation, philosophy]
 ---
